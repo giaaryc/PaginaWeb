@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+    </head>
+    <body bgcolor="#fbe3e3">
+        <header>
+            <nav>
+                <table width="100%">
+                    <tr>
+                        <td width="76%"><img src="imagenes/Logo.png" alt="Logo de Delicias GIAM GIAM" width="90"></td>
+                        <td width="12%"><a href="index.html">Inicio</a></td>
+                        <td width="12%"><a href="Login.html">Registro</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <img src="imagenes/Banner.png" alt="Banner de la tienda" width="100%" height="400">
+        </header>
+
+        <main>
+            <form>
+                <h1 align="center">Formulario Registro</h1>
+                <table align="center">
+                    <tr>
+                        <td><label for="Nombres">Nombres:</label></td>
+                        <td><input id="Nombres" type="text" name="Nombres" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Apellidos">Apellidos:</label></td>
+                        <td><input id="Apellidos" type="text" name="Apellidos" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Usuario">Usuario:</label></td>
+                        <td><input id="Usuario" type="text" name="Usuario" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Contraseña">Contraseña:</label></td>
+                        <td><input id="Contraseña" type="password" name="Contraseña" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">Email:</label></td>
+                        <td><input id="Email" type="email" name="Email" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Tel">Teléfono:</label></td>
+                        <td><input type="tel" name="Teléfono" id="Tel" size="40" pattern="[0-9]{9}"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Sexo:</label></td>
+                        <td>
+                            <input id="Mujer" type="radio" name="Sexo" value="Mujer">
+                            <label for="Mujer">Mujer</label>
+                            <input id="Hombre" type="radio" name="Sexo" value="Hombre">
+                            <label for="Hombre">Hombre</label>
+                            <input id="Secreto" type="radio" name="Sexo" value="Secreto">
+                            <label for="Secreto">Prefiero no decirlo</label>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Opciones">Región:</label></td>
+                        <td>          
+                            <select id="Opciones" size="4"  >
+                                <option >Arica y Parinacota</option>
+                                <option>Tarapacá</option>
+                                <option>Antofagasta</option>
+                                <option>Atacama</option>
+                                <option>Coquimbo</option>
+                                <option>Valparaíso</option>
+                                <option>Metropolitana</option>
+                                <option>O'Higgins</option>
+                                <option>Maule</option>
+                                <option>Ñuble</option>
+                                <option>Biobío</option>
+                                <option>La Araucanía</option>
+                                <option>Los Ríos</option>
+                                <option>Los Lagos</option>
+                                <option>Aysén</option>
+                                <option>Magallanes</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Intereses:</label></td>
+                        <td>
+                            <input id="Pastel" type="checkbox" name="Interes" value="Pasteles Clásicos">
+                            <label for="Pastel">Pasteles Clásicos</label><br>
+                            <input id="Tartas" type="checkbox" name="Interes" value="Tartas">
+                            <label for="Tartas">Tartas</label><br>
+                            <input id="CyM" type="checkbox" name="Interes" value="Cupcakes y Muffins">
+                            <label for="CyM">Cupcakes y Muffins</label><br> 
+                            <input id="Galletas" type="checkbox" name="Interes" value="Galletas">
+                            <label for="Galletas">Galletas</label><br>
+                            <input id="Pindividual" type="checkbox" name="Interes" value="Postres Individuales">
+                            <label for="Pindividual">Postres Individuales</label><br>
+                            <input id="SinGluyVeg" type="checkbox" name="Interes" value="Postres sin gluten o veganos">
+                            <label for="SinGluyVeg">Postres sin gluten o veganos</label><br> 
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Perfil">Foto de Perfil:</label></td>
+                        <td><input type="file" id="Perfil"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <br><input type="submit" value="Registrar">
+                        </td>
+                    </tr>
+                </table>
+                </form>    
+                <br><br>
+        </main>
+        <footer >
+            <table width="100%" bgcolor="#FF94AC">
+                <tr align="center">
+                    <td width="40%"><h3>Delicias GIAM GIAM</h3></td>
+                    <td width="25%"><h3>Conócenos</h3></td>
+                    <td width="25%"><h3>Menú</h3></td>
+                    <td width="10%"><h3>Síguenos</h3></td>
+                </tr>
+                <tr>
+                    <td align="center"> 
+                        En nuestra pastelería, cada postre es creado con los mejores ingredientes y todo nuestro cariño, esto con la intención de que cada uno sea una experiencia única y especial para ti.</td>
+                    <td>                
+                        <ul>
+                        <li>
+                            <a href="">Historia</a>
+                        </li>
+                        <li>
+                            <a href="">Preguntas frecuentes</a> 
+                        </li>
+                        <li>
+                            <a href="">Locales y horario</a>
+                        </li>
+                        <li>
+                            <a href="">Reseñas</a>
+                        </li>
+                    </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="index.html">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="Login.html">Resgistro</a>
+                            </li>
+                            <li>
+                                <a href="">Catálogo</a>
+                            </li>
+                            <li>
+                                <a href="">Ofertas</a>
+                            </li>
+                            <li>
+                                <a href="">Eventos</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td align="center">
+                        <a href="https://web.whatsapp.com/" target="_blank">
+                            <img src="imagenes/wsp.png" alt="WhatsApp" width="55"><br>
+                        </a>
+                        <a href="https://www.facebook.com/login/?locale=es_LA" target="_blank">
+                            <img src="imagenes/face.png" alt="Facebook" width="30"><br>
+                        </a>
+                        <a href="https://www.instagram.com/accounts/login/" target="_blank">                
+                            <img src="imagenes/instagram.png" alt="Instagram" width="55"><br>
+                        </a>        
+                    </td>
+                </tr>
+            </table>
+            <p align="center">&copy 2024 Giarella Varas C.</p>
+        </footer>
+    </body>
+</html>
