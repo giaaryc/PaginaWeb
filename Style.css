@@ -337,6 +337,8 @@ form h1{
 }
 
 /* Nosotros */
+
+/* Historia + Galeria */
 .Historia-Galeria{
     display: grid;
     grid-template-columns: 20% 40% 20%;
@@ -378,3 +380,38 @@ form h1{
     margin:50px auto;
     text-align: center;
 }
+
+/* Misión + Visión + Equipo + Compromiso */
+.Informacion {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    padding: 10px;
+    margin-top: 140px;
+}
+
+.Informacion-item {
+    background-color: #FAEBA6;
+    padding: 20px;
+    width: 20%;
+    height: 420px;
+    text-align: center;
+    border: #f7dd6e solid 5px;
+
+}
+
+.Informacion-item img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.Informacion-item p {
+    font-size: 16px;
+}
+
+/* */
+
+
+
