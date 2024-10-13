@@ -31,7 +31,7 @@ nav a {
     font-size: 20px;
 }
 
-/* Contenedor */
+/* Contenedor INICIO/NOSOTROS */
 .container {
     display: grid;
     grid-template-columns: auto;
@@ -334,4 +334,47 @@ form h1{
     left: 170px;
     height: 200px;
     width: 500px;
+}
+
+/* Nosotros */
+.Historia-Galeria{
+    display: grid;
+    grid-template-columns: 20% 40% 20%;
+    justify-content: center;
+    column-gap: 50px;
+    height: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Galeria-Vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd7bb8;
+    width: 100%;
+
+}
+
+.Vertical-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+}
+
+.Vertical-item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Historia-item{
+    background-color: aqua;
+    width: 80%;
+    font-size: 17px;
+    padding: 50px;
+    margin:50px auto;
+    text-align: center;
 }
