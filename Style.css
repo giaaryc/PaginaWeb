@@ -41,7 +41,10 @@ nav a {
 
 .containerFormulario {
     display: grid;
-    background-color: aquamarine;
+    background-image: url(imagenes/FondoRegistro.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 70%;
 }
 
 /* Banner */
@@ -149,7 +152,6 @@ footer {
     letter-spacing: 2px;
 }
 
-
 .contactos img {
     max-width: 50%;
     max-height: 50%;
@@ -164,5 +166,58 @@ footer p {
     text-align: center;
     grid-column: span 4;
     font-size: 20px;
-  
 }
+
+form{
+    background-color: #f7accf;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    height: 550px;
+    width: 50%;
+    margin-top: 300px;
+    margin-bottom: 300px ;
+    margin-left: 450px;
+    border-color: #fd7bb8;
+    border-width: 10px;
+    border-style: dotted;
+    border-radius: 10%;
+}
+form h1{
+    text-align: center;
+    grid-column: span 2;
+}
+
+form label{
+    text-align: center;
+    font-size: 25px;
+}
+
+form input{
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    border: 3px solid #fd7bb8;
+}
+
+form button{
+    font-size: 25px;
+    grid-column: span 2;
+    width: 200px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 350px;
+    background-color: #fd7bb8;
+    transition: 2s;
+}
+form button:hover{
+    background-color: #dd619b;
+    transition: 2s;
+}
+
+form a{
+    font-size: 25px;
+    margin-left:700px;
+    grid-column: span 2;
+}
+
