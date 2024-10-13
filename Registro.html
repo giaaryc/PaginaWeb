@@ -6,118 +6,100 @@
         <title>Registro</title>
         <link rel="stylesheet" href="Style.css">
     </head>
-    
-    <body >
-        <div class="container">
+
+    <body>
+        <div class="containerFormulario">
             <header>
                 <nav>
-                    <img src="imagenes/Logo.png" alt="Logo de Delicias GIAM GIAM">
+                    <img class="LogoSuperior" src="imagenes/Logo.png" alt="Logo de Delicias GIAM GIAM">
                     <a href="index.html">Inicio</a>
                     <a href="Login.html">Registro</a>
                     <a href="Nosotros.html">Nosotros</a>
                 </nav>
-                <img src="imagenes/Banner.png" alt="Banner de la tienda">
+                <img class="Banner" src="imagenes/Banner.png" alt="Banner de la tienda">
             </header>
-    
+        
             <main>
-                <form>
+                <form class="Registro">
                     <h1>Formulario Registro</h1>
-                    <table>
-                        <tr>
-                            <td><label for="Nombres">Nombres:</label></td>
-                            <td><input id="Nombres" type="text" name="Nombres"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="Apellidos">Apellidos:</label></td>
-                            <td><input id="Apellidos" type="text" name="Apellidos"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="Usuario">Usuario:</label></td>
-                            <td><input id="Usuario" type="text" name="Usuario"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="Contraseña">Contraseña:</label></td>
-                            <td><input id="Contraseña" type="password" name="Contraseña"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="Email">Email:</label></td>
-                            <td><input id="Email" type="email" name="Email"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="Tel">Teléfono:</label></td>
-                            <td><input type="tel" name="Teléfono" id="Tel" pattern="[0-9]{9}"></td>
-                        </tr>
-                        <tr>
-                            <td><label>Sexo:</label></td>
-                            <td>
-                                <input id="Mujer" type="radio" name="Sexo" value="Mujer">
-                                <label for="Mujer">Mujer</label>
-                                <input id="Hombre" type="radio" name="Sexo" value="Hombre">
-                                <label for="Hombre">Hombre</label>
-                                <input id="Secreto" type="radio" name="Sexo" value="Secreto">
-                                <label for="Secreto">Prefiero no decirlo</label>    
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="Opciones">Región:</label></td>
-                            <td>          
-                                <select id="Opciones" size="4">
-                                    <option >Arica y Parinacota</option>
-                                    <option>Tarapacá</option>
-                                    <option>Antofagasta</option>
-                                    <option>Atacama</option>
-                                    <option>Coquimbo</option>
-                                    <option>Valparaíso</option>
-                                    <option>Metropolitana</option>
-                                    <option>O'Higgins</option>
-                                    <option>Maule</option>
-                                    <option>Ñuble</option>
-                                    <option>Biobío</option>
-                                    <option>La Araucanía</option>
-                                    <option>Los Ríos</option>
-                                    <option>Los Lagos</option>
-                                    <option>Aysén</option>
-                                    <option>Magallanes</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="">Intereses:</label></td>
-                            <td>
-                                <input id="Pastel" type="checkbox" name="Interes" value="Pasteles Clásicos">
-                                <label for="Pastel">Pasteles Clásicos</label><br>
-                                <input id="Tartas" type="checkbox" name="Interes" value="Tartas">
-                                <label for="Tartas">Tartas</label><br>
-                                <input id="CyM" type="checkbox" name="Interes" value="Cupcakes y Muffins">
-                                <label for="CyM">Cupcakes y Muffins</label><br> 
-                                <input id="Galletas" type="checkbox" name="Interes" value="Galletas">
-                                <label for="Galletas">Galletas</label><br>
-                                <input id="Pindividual" type="checkbox" name="Interes" value="Postres Individuales">
-                                <label for="Pindividual">Postres Individuales</label><br>
-                                <input id="SinGluyVeg" type="checkbox" name="Interes" value="Postres sin gluten o veganos">
-                                <label for="SinGluyVeg">Postres sin gluten o veganos</label><br> 
-    
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="Perfil">Foto de Perfil:</label></td>
-                            <td><input type="file" id="Perfil"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center">
-                                <br><input type="submit" value="Registrar">
-                            </td>
-                        </tr>
-                    </table>
-                    </form>    
-                    <br><br>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Nombres">Nombres:</label></td>
+                        <input class="input" id="Nombres" type="text" name="Nombres"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Apellidos">Apellidos:</label></td>
+                        <input class="input" id="Apellidos" type="text" name="Apellidos"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Usuario">Usuario:</label></td>
+                        <input class="input" id="Usuario" type="text" name="Usuario"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Contraseña">Contraseña:</label></td>
+                        <input class="input" id="Contraseña" type="password" name="Contraseña"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Email">Email:</label></td>
+                        <input class="input" id="Email" type="email" name="Email"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Tel">Teléfono:</label></td>
+                        <input class="input" type="tel" name="Teléfono" id="Tel" pattern="[0-9]{9}"></td>    
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label" for="Opciones">Región:</label></td>
+                        <select class="input" class="SeleccionRegion" id="Opciones">
+                            <option >Elegir</option>
+                            <option>Arica y Parinacota</option>
+                            <option>Atacama</option>
+                            <option>Valparaíso</option>
+                            <option>Metropolitana</option>
+                            <option>Biobío</option>
+                            <option>Otra</option>
+                        </select>
+                    </div>
+                    <div class="Registro-item"> 
+                        <label  class="label">Sexo:</label></td>
+                        <div class="Sexo-Radio">
+                            <input id="Mujer" type="radio" name="Sexo" value="Mujer">
+                            <label class="label-sexo" for="Mujer">Mujer</label>
+                            <input id="Hombre" type="radio" name="Sexo" value="Hombre">
+                            <label class="label-sexo" for="Hombre">Hombre</label>
+                            <input id="Secreto" type="radio" name="Sexo" value="Secreto">
+                            <label class="label-sexo" for="Secreto">Prefiero no decirlo</label>        
+                        </div>
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label">Intereses:</label></td>
+                        <div class="Intereses">                        <input id="Pastel" type="checkbox" name="Interes" value="Pasteles Clásicos">
+                            <label class="label-interes" for="Pastel">Pasteles Clásicos</label><br>
+                            <input class="input-interes" id="Tartas" type="checkbox" name="Interes" value="Tartas">
+                            <label class="label-interes" for="Tartas">Tartas</label><br>
+                            <input class="input-interes" id="CyM" type="checkbox" name="Interes" value="Cupcakes y Muffins">
+                            <label class="label-interes" for="CyM">Cupcakes y Muffins</label><br> 
+                            <input class="input-interes" id="Galletas" type="checkbox" name="Interes" value="Galletas">
+                            <label class="label-interes" for="Galletas">Galletas</label><br>
+                            <input class="input-interes" id="Pindividual" type="checkbox" name="Interes" value="Postres Individuales">
+                            <label class="label-interes" for="Pindividual">Postres Individuales</label><br>
+                            <input class="input-interes" id="SinGluyVeg" type="checkbox" name="Interes" value="Postres sin gluten o veganos">
+                            <label class="label-interes" for="SinGluyVeg">Postres sin gluten o veganos</label><br> 
+                        </div>
+                    </div>
+                    <div class="Registro-item"> 
+                        <label class="label-perfil" for="Perfil">Foto de Perfil:</label></td>
+                        <input class="input-perfil" type="file" id="Perfil"></td>    
+                    </div>
+                    <button type="submit"> Registrar </button></td>
+                </form>    
+                <br><br>
             </main>
+
             <footer>
-                <div class="Aun nose ">
+                <div class="Texto">
                     <h3>Delicias GIAM GIAM</h3>
                     <p>En nuestra pastelería, cada postre es creado con los mejores ingredientes y todo nuestro cariño, esto con la intención de que cada uno sea una experiencia única y especial para ti.</p>
                 </div>
-                <div class="links">
+                <div class="link-footer">
                     <h3>Conócenos</h3>
                     <ul>
                         <li>
@@ -134,7 +116,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="links">
+                <div class="link-footer">
                     <h3>Menú</h3>
                     <ul>
                         <li>
@@ -157,20 +139,18 @@
                 <div class="contactos">
                     <h3>Síguenos</h3>
                     <a href="https://web.whatsapp.com/" target="_blank">
-                        <img src="imagenes/wsp.png" alt="WhatsApp" width="55"><br>
+                        <img src="imagenes/wsp.png" alt="WhatsApp"><br>
                     </a>
                     <a href="https://www.facebook.com/login/?locale=es_LA" target="_blank">
-                        <img src="imagenes/face.png" alt="Facebook" width="30"><br>
+                        <img src="imagenes/face.png" alt="Facebook"><br>
                     </a>
                     <a href="https://www.instagram.com/accounts/login/" target="_blank">                
-                        <img src="imagenes/instagram.png" alt="Instagram" width="55"><br>
+                        <img src="imagenes/instagram.png" alt="Instagram"><br>
                     </a>        
-                </div>
     
-                <div class="Creador">
-                    <p> &copy 2024 Giarella Varas C.</p>
                 </div>
-            </footer>    
+                    <p> &copy 2024 Giarella Varas C.</p>
+            </footer>
         </div>
     </body>
 </html>

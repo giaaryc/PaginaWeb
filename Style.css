@@ -41,10 +41,10 @@ nav a {
 
 .containerFormulario {
     display: grid;
+    justify-items: center;
     background-image: url(imagenes/FondoRegistro.png);
-    background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% 70%;
+    background-size: 100% 80%;
 }
 
 /* Banner */
@@ -52,6 +52,7 @@ nav a {
     width: 100%;
     height: 450px;
     margin-top: 20px;
+    margin-bottom: 150px;
 }
 
 /* Galería */
@@ -127,29 +128,37 @@ footer {
     height: 300px;
     grid-template-rows: 90% 10%;
     grid-template-columns: 40% 25% 25% 10%;
+    margin-top: 100px;
 }
 
 .Texto h3{
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 70px;
+    letter-spacing: 3px;
+
 }
 
 .Texto p{
-    font-size: 23px;
+    font-size: 17px;
     text-align: center;
     margin: 0px 50px;
+    line-height: 2;
 }
 
 .link-footer h3 {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
+    letter-spacing: 3px;
+
 }
 
 .link-footer ul a {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 2;
     letter-spacing: 2px;
+    letter-spacing: 3px;
+
 }
 
 .contactos img {
@@ -158,8 +167,10 @@ footer {
 }
 
 .contactos h3 {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
+    letter-spacing: 3px;
+
 }
 
 footer p {
@@ -168,12 +179,13 @@ footer p {
     font-size: 20px;
 }
 
-form{
+/* Formulario Login */
+.Login{
     background-color: #f7accf;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
-    height: 550px;
+    height: 60%;
     width: 50%;
     margin-top: 300px;
     margin-bottom: 300px ;
@@ -183,6 +195,7 @@ form{
     border-style: dotted;
     border-radius: 10%;
 }
+
 form h1{
     text-align: center;
     grid-column: span 2;
@@ -193,14 +206,14 @@ form label{
     font-size: 25px;
 }
 
-form input{
+.Login input{
     width: 400px;
     height: 50px;
     font-size: 25px;
     border: 3px solid #fd7bb8;
 }
 
-form button{
+.Login button{
     font-size: 25px;
     grid-column: span 2;
     width: 200px;
@@ -208,11 +221,6 @@ form button{
     margin-top: 40px;
     margin-left: 350px;
     background-color: #fd7bb8;
-    transition: 2s;
-}
-form button:hover{
-    background-color: #dd619b;
-    transition: 2s;
 }
 
 form a{
@@ -221,3 +229,93 @@ form a{
     grid-column: span 2;
 }
 
+/*Registro */
+.Registro{
+    background-color: #f7accf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 1000px;
+    width: 700px;
+    border-color: #fd7bb8;
+    border-width: 8px;
+    border-radius: 8%;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
+}
+
+.Registro-item{
+    position: relative;
+    height: 60px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.input{
+    position: absolute;
+    top: 5px;
+    left: 180px;
+    height: 80%;
+    width: 50%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 17px;
+    padding: 0 20px;
+}
+
+.label{
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    padding: 0 4px;
+    color: #000000;
+    font-size: 17px;
+}
+
+.Registro button{
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    margin-top: 60px;
+    background-color: #fd7bb8;
+}
+
+.Sexo-Radio{
+    position: absolute;
+    top: 15px;
+    left: 170px;
+    width: 70%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.label-sexo{
+    font-size: 17px;
+}
+
+.Intereses{
+    cursor: pointer;
+    position: absolute;
+    width: 70%;
+    left: 170px;
+}
+
+.label-interes{
+    font-size: 17px;
+}
+
+.label-perfil{
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    font-size: 17px;
+}
+
+.input-perfil{
+    position: absolute;
+    top: 75px;
+    left: 170px;
+    height: 200px;
+    width: 500px;
+}
