@@ -31,20 +31,12 @@ nav a {
     font-size: 20px;
 }
 
-/* Contenedores */
+/* Contenedor */
 .container {
     display: grid;
     grid-template-columns: auto;
     background-image: url(imagenes/Fondo.png);
     background-position: center;
-}
-
-.containerFormulario {
-    display: grid;
-    justify-items: center;
-    background-image: url(imagenes/FondoRegistro.png);
-    background-position: center center;
-    background-size: 100% 80%;
 }
 
 /* Banner */
@@ -179,21 +171,13 @@ footer p {
     font-size: 20px;
 }
 
-/* Formulario Login */
-.Login{
-    background-color: #f7accf;
+/* Contewnedor para LOGIN/REGISTRO */
+.containerFormulario {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-    height: 60%;
-    width: 50%;
-    margin-top: 300px;
-    margin-bottom: 300px ;
-    margin-left: 450px;
-    border-color: #fd7bb8;
-    border-width: 10px;
-    border-style: dotted;
-    border-radius: 10%;
+    justify-items: center;
+    background-image: url(imagenes/FondoRegistro.png);
+    background-position: center center;
+    background-size: 100% 80%;
 }
 
 form h1{
@@ -201,35 +185,67 @@ form h1{
     grid-column: span 2;
 }
 
-form label{
-    text-align: center;
-    font-size: 25px;
+/* Formulario Login */
+.Login{
+    background-color: #f7accf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 600px;
+    border-color: #fd7bb8;
+    border-width: 8px;
+    border-radius: 8%;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
 }
 
-.Login input{
-    width: 400px;
-    height: 50px;
-    font-size: 25px;
-    border: 3px solid #fd7bb8;
+.Login-item{
+    position: relative;
+    height: 60px;
+    width: 90%;
+    margin-bottom: 10px;
 }
 
-.Login button{
-    font-size: 25px;
-    grid-column: span 2;
+.Login-item label{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    padding: 0 4px;
+    color: #000000;
+    font-size: 17px;
+}
+
+.Login-item input{
+    position: absolute;
+    top: 5px;
+    left: 180px;
+    height: 80%;
+    width: 50%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 17px;
+    padding: 0 20px;
+}
+
+.Login-item button{
+    position: absolute;
+    left: 170px;
+    top: 20px;
+    font-size: 20px;
     width: 200px;
-    height: 100px;
-    margin-top: 40px;
-    margin-left: 350px;
+    height: 50px;
     background-color: #fd7bb8;
 }
 
-form a{
-    font-size: 25px;
-    margin-left:700px;
-    grid-column: span 2;
+.Login-item a{
+    position: absolute;
+    left: 400px;
+    top: 30px;
+    font-size: 20px;
 }
 
-/*Registro */
+/* Formulario Registro */
 .Registro{
     background-color: #f7accf;
     display: flex;
