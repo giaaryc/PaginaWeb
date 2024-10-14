@@ -1,5 +1,10 @@
-.FondoPastel {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+* {             /*Selector universal*/
+    margin: 0 0;
+    padding: 0;
+    font-family: "Patrick Hand", "Modern Love Caps";
+}
+
+.FondoPastel {      /*Selector de clase*/
     background-image: url(imagenes/Fondo.png);
     background-size: auto;
 }
@@ -10,8 +15,26 @@
     background-position: center;
 }
 
+p {             /*Selector de tipo*/
+    font-size: 19px;
+    text-align: center;
+}
+
+ul{             /*Selector de tipo*/
+    font-size: 18px;
+    line-height: 2;
+}
+
+h3{             /*Selector de tipo*/
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+    letter-spacing: 3px;
+    font-family: "Modern Love Caps";
+}
+
 /* Navegación */
-nav {
+nav {           /*Selector de tipo*/
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -22,7 +45,7 @@ nav {
     justify-content: space-between;
 }
 
-nav img {
+nav img {       
     width: 130px;
     margin-right: auto;
 }
@@ -68,15 +91,11 @@ nav a {
     max-height: 75%;
 }
 
-.Galeria-item p {
-    font-size: 18px;
-}
-
 /* Imagen y Texto */
 .Imagen-Texto {
     background-color: #92C5FC;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 40%;
     grid-template-rows: auto auto;
     height: 550px;
     width: 90%;
@@ -84,30 +103,36 @@ nav a {
     border-color: #5ea8f7;
     border-width: 10px;
     border-style: dotted;
+    align-items: center;
+    justify-content: center;
 }
 
 .Imagen-Texto img {
     width: 500px;
     height: 400px;
     grid-row: span 3;
-    margin: auto auto;
-    
+    margin: auto 50px;
+    border: 4px solid #ffffff ;
 }
 
-.Imagen-Texto h2 {
+#TituloCuadro{          /*Selector de id*/
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     font-size: 30px;
-    text-align: center;
-    margin: 100px auto ;
 }
 
-.Imagen-Texto p {
-    font-size: 20px;
+#TextoCuadro{           /*Selector de id*/
     text-align: center;
-    margin: -100px auto ;
+    margin: auto;
+    width: 80%;
 }
 
 /* Footer */
-footer {
+footer {    /*Selector de tipo*/
     display: grid;
     justify-items: space-between;
     padding: 20px;
@@ -120,31 +145,11 @@ footer {
     margin-top: 100px;
 }
 
-.Texto h3{
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 70px;
-    letter-spacing: 3px;
-
-}
-
 .Texto p{
     font-size: 17px;
     text-align: center;
     margin: 0px 50px;
     line-height: 2;
-}
-
-.link-footer h3 {
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.link-footer ul a {
-    font-size: 17px;
-    line-height: 2;
-
 }
 
 .RedesSociales img {
@@ -166,13 +171,13 @@ footer p {
 }
 
 /* Formulario */
-form h1{
+form h1{         /*Selector de tipo*/
     text-align: center;
     grid-column: span 2;
 }
 
 /* Formulario Login */
-.Login{
+#Login{
     background-color: #f7accf;
     display: flex;
     justify-content: center;
@@ -185,6 +190,10 @@ form h1{
     border-radius: 8%;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
     margin: 0 auto;
+}
+
+#Login, #TituloForm{
+    margin-bottom: 50px;
 }
 
 .Login-item{
@@ -215,7 +224,7 @@ form h1{
     padding: 0 20px;
 }
 
-.Login-item button{
+#Login button{
     position: absolute;
     left: 170px;
     top: 20px;
@@ -233,7 +242,7 @@ form h1{
 }
 
 /* Formulario Registro */
-.Registro{
+#Registro{
     background-color: #f7accf;
     display: flex;
     justify-content: center;
@@ -248,6 +257,9 @@ form h1{
     margin: 0 auto;
 }
 
+#Registro, #TituloForm{
+    margin-bottom: 50px;   
+}
 .Registro-item{
     position: relative;
     height: 60px;
@@ -276,7 +288,7 @@ form h1{
     font-size: 17px;
 }
 
-.Registro button{
+#Registro button{
     font-size: 20px;
     width: 200px;
     height: 50px;
@@ -374,7 +386,7 @@ form h1{
     flex-direction: row;
     justify-content: space-between; 
     align-items: center; 
-    height: 700px;
+    height: 900px;
     padding: 10px;
     margin-top: 140px;
 }
@@ -383,7 +395,7 @@ form h1{
     background-color: #FAEBA6;
     padding: 20px;
     width: 20%;
-    height: 420px;
+    height: 520px;
     text-align: center;
     border: #f7dd6e solid 5px;
 }
@@ -393,8 +405,9 @@ form h1{
     max-height: 60%;
 }
 
-.Informacion-item p {
-    font-size: 16px;
+.InfoExtra-item h2{
+    text-align: center;
+    font-size: 35px;
 }
 
 /* */
@@ -406,8 +419,8 @@ form h1{
     width: 80%;
     height: 600px;
     margin: 0 auto;
-
 }
+
 .GaleriaInfo {
     display: flex;
     flex-direction: column;
@@ -447,6 +460,10 @@ form h1{
     text-align: justify;
 }
 
+.InfoExtra-item span{
+    color: #e72a82;
+    font-size: 21px;
+}
 /* UBICACION */
 .ubicacion-mensaje {
     display: grid;
@@ -488,14 +505,34 @@ form h1{
 }
 
 .mensaje {
-    height: 120px;
+    height: 80px;
     width: 70%;
     border: 3px solid #5ea8f7;
     font-size: 17px;
     padding: 0 20px;
 }
 
+.contactos {
+    background-color: #5ea8f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 
+.contactos-item {
+    max-width: 40px;
+    margin: 30px;
+}
+
+.contactos-item img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.InfoContacto {
+    text-align: center;
+}
 .copyright {
     width: 100%;
     height: 20px;
