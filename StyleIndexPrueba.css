@@ -11,6 +11,7 @@
 
 h1{
     font-size: 35px;
+    margin-top: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -70,11 +71,9 @@ nav a{
 }
 
 main{
-    background-color: rgb(206, 215, 255);
     display: grid;
     grid-template-columns: auto auto;
     grid-row: auto auto auto auto;
-
 }
 
 #TituloBienvenida{
@@ -89,9 +88,9 @@ main{
     grid-column: span 2;
 }
 
+
 #Productos{
     grid-column: span 2;
-    background-color: rgb(38, 94, 131);
     display: flex; 
     flex-direction: row;
     justify-content: space-between; 
@@ -106,6 +105,7 @@ main{
     width: 18%;
     height: 90%;
     margin: 0 auto;
+    border-radius: 10%;
 }
 
 .Productos-item img{
@@ -114,7 +114,7 @@ main{
 }
 
 #Ofertas{
-    background-color: rgb(176, 60, 180);
+    background-color: #FAEBA6;
     display: flex; 
     flex-direction: row;
     justify-content: space-between; 
@@ -123,15 +123,18 @@ main{
     padding: 10px;
 }
 
-.Ofertas-item{
-    background-color: rgb(255, 115, 0);
+.Oferta-item{
+    background-color: #5df73e;
+    width: 45%;
+    height: 90%;
+    margin: 0 auto;
 
 }
 
 #Recomendacion{
     background-color: rgb(48, 201, 17);
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between; 
     align-items: center; 
     height: 400px;
@@ -139,13 +142,15 @@ main{
 }
 
 .Recomendacion-item{
-    background-color: rgb(255, 255, 255);
-
+    background-color: rgb(13, 218, 115);
+    width: 90%;
+    height: 45%;
+    margin: auto 0;
 }
 
 #Novedades{
     grid-column: span 2;
-    background-color: rgb(187, 27, 27);
+    background-color: #ffffcc;
     display: flex; 
     flex-direction: row;
     justify-content: space-between; 
@@ -155,13 +160,14 @@ main{
 }
 
 .Novedades-item{
-    background-color: rgb(153, 145, 69);
-
+    background-color: #d3d3d3;
+    width: 19%;
+    height: 90%;
+    margin: 0 auto;
 }
 
 #Sucursales{
     grid-column: span 2;
-
     background-color: rgb(60, 180, 144);
     display: flex; 
     flex-direction: row;
@@ -172,5 +178,8 @@ main{
 }
 
 .Sucursal-item{
-
+    background-color: #f73e94;
+    width: 18%;
+    height: 90%;
+    margin: 0 auto;
 }
