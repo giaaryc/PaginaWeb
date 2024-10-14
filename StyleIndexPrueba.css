@@ -1,0 +1,176 @@
+* {             /*Selector universal*/
+    margin: 0 0;
+    padding: 0;
+    font-family: "Patrick Hand", "Modern Love Caps";
+}
+
+.FondoPastel {      /*Selector de clase*/
+    background-image: url(imagenes/Fondo.png);
+    background-size: auto;
+}
+
+h1{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+p {
+    font-size: 17px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    max-width: 100%;
+    max-height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.InformacionContacto{
+    display: flex;
+    flex: row;
+    background-color: #f73e94;
+    width: 100%;
+    height: 35px;
+    justify-content: start;
+    align-items: center;
+}
+
+.InformacionContacto p{
+    max-width: 100%;
+    height: 35px;
+    margin: 0 40px;
+    padding: 10px;
+}
+
+nav {
+    background-color: #f73e94;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+nav a{
+    max-width: 100%;
+    height: 35px;
+    margin: 0 40px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.LogoSuperior{
+    max-width: 40%;
+    max-height: 40%;
+}
+
+main{
+    background-color: rgb(206, 215, 255);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto auto auto;
+
+}
+
+#TituloBienvenida{
+    grid-column: span 2;
+    font-size: 40px;
+    color: #f73e94;
+    text-align: center;
+    padding: 30px;
+}
+
+.TituloSeccon{
+    grid-column: span 2;
+}
+
+#Productos{
+    grid-column: span 2;
+    background-color: rgb(38, 94, 131);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.Productos-item{
+    background-color: #f73e94;
+    width: 18%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.Productos-item img{
+    height: 40%;
+    width: 90%;
+}
+
+#Ofertas{
+    background-color: rgb(176, 60, 180);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    padding: 10px;
+}
+
+.Ofertas-item{
+    background-color: rgb(255, 115, 0);
+
+}
+
+#Recomendacion{
+    background-color: rgb(48, 201, 17);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    padding: 10px;
+}
+
+.Recomendacion-item{
+    background-color: rgb(255, 255, 255);
+
+}
+
+#Novedades{
+    grid-column: span 2;
+    background-color: rgb(187, 27, 27);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    padding: 10px;
+}
+
+.Novedades-item{
+    background-color: rgb(153, 145, 69);
+
+}
+
+#Sucursales{
+    grid-column: span 2;
+
+    background-color: rgb(60, 180, 144);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    padding: 10px;
+}
+
+.Sucursal-item{
+
+}
