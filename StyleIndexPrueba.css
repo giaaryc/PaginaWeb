@@ -114,26 +114,38 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center; 
+    padding: 5px;
 }
 
 .Productos-item:hover{
     padding: 30px;
     -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
     box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-
   }
 
 .Productos-item img{
     margin-top: 10px;
-    max-width: 90%;
-    max-height: 100%;
+    width: 90%;
+    height: 80%;
     border-radius: 10%;
     transition: transform 1s linear;
 }
 
-.Productos-item img:hover{
+.Productos-item:hover img{
     box-shadow: 0 0 20px white;
-    transform:scale(1.25);
+    transform:scale(1.2);
+}
+
+.Productos-item h2{
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 1s linear, text-shadow 1s linear; /* Transiciones para el texto */
+}
+
+.Productos-item:hover h2{
+    margin-top: 30px;
+    transform: scale(1.1); /* Escala del texto */
+    text-shadow: 0 0 10px white; /* Sombra del texto */
 }
 
 #Ofertas{
