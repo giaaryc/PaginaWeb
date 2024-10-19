@@ -5,7 +5,7 @@
 }
 
 .FondoPastel {      /*Selector de clase*/
-    background-image: url(imagenes/Fondo.png);
+    background-color: #fab8d6;
     background-size: auto;
 }
 
@@ -23,46 +23,51 @@ p {
     font-size: 17px;
 }
 
+button {
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
 header{
+    background-image: url(imagenes/Header.jfif);
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
     max-width: 100%;
     max-height: auto;
     justify-content: center;
     align-items: center;
 }
 
-.InformacionContacto{
-    display: flex;
-    flex: row;
-    background-color: #f73e94;
-    width: 100%;
-    height: 35px;
-    justify-content: start;
-    align-items: center;
-}
-
-.InformacionContacto p{
-    max-width: 100%;
-    height: 35px;
-    margin: 0 40px;
-    padding: 10px;
-}
-
 nav {
     background-color: #f73e94;
     width: 100%;
-    height: 40px;
+    height: 30px;
     text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a{
+.MenuLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.MenuLinks a{
     max-width: 100%;
     height: 35px;
-    margin: 0 40px;
-    padding: 10px;
-    font-size: 17px;
+    margin: 0 0px;
+    padding: 8px 16px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.MenuLinks a:hover{
+    color: white;
 }
 
 .LogoSuperior{
@@ -78,11 +83,11 @@ main{
 
 #TituloBienvenida{
     grid-column: span 2;
-    font-size: 50px;
+    font-size: 60px;
     color: #ffffff;
     text-align: center;
     padding: 30px;
-    text-shadow: 0 0 30px hsl(315, 100%, 88%), 0 0 40px #ff70cf, 0 0 50px #ff1f87, 0 0 60px #d60064;
+    text-shadow: 0 0 30px hsl(307, 100%, 92%), 0 0 40px #f55491, 0 0 50px #ff1f88, 0 0 60px #ff038e;
     font-family: 'Pacifico', cursive;
     letter-spacing: 4px;
 }
@@ -104,13 +109,13 @@ main{
 }
 
 .Productos-item{
-    background-color: #f73e94;
+    background-color: #ffffff;
     width: 18%;
     height: 90%;
     margin: 0 auto;
     border-radius: 10%;
-    -webkit-transition: 1s linear;
-    transition: 1s linear;
+    -webkit-transition: 0.6s linear;
+    transition: 0.6s linear;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -121,14 +126,14 @@ main{
     padding: 30px;
     -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
     box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-  }
+}
 
 .Productos-item img{
     margin-top: 10px;
-    width: 90%;
+    width: 98%;
     height: 80%;
     border-radius: 10%;
-    transition: transform 1s linear;
+    transition: transform 0.6s linear;
 }
 
 .Productos-item:hover img{
@@ -139,7 +144,7 @@ main{
 .Productos-item h2{
     margin-top: 20px;
     text-align: center;
-    transition: transform 1s linear, text-shadow 1s linear; /* Transiciones para el texto */
+    transition: transform 0.6s linear, text-shadow 0.6s linear;
 }
 
 .Productos-item:hover h2{
@@ -163,7 +168,6 @@ main{
     width: 45%;
     height: 90%;
     margin: 0 auto;
-
 }
 
 #Recomendacion{
@@ -185,20 +189,30 @@ main{
 
 #Novedades{
     grid-column: span 2;
-    background-color: #ffffcc;
     display: flex; 
     flex-direction: row;
     justify-content: space-between; 
     align-items: center; 
-    height: 400px;
+    height: 650px;
     padding: 10px;
 }
 
 .Novedades-item{
-    background-color: #d3d3d3;
-    width: 19%;
+    width: 30%;
     height: 90%;
     margin: 0 auto;
+}
+
+.Novedades-item img{
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10%;
+}
+
+.Novedades-item h2, p {
+    background-color: #FAEBA6;
+    text-align: center;
+    padding: 15px;
 }
 
 #Sucursales{
@@ -206,17 +220,25 @@ main{
     background-color: rgb(60, 180, 144);
     display: flex; 
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
-    height: 400px;
+    height: 500px;
     padding: 10px;
 }
 
-.Sucursal-item{
+.Sucursal-item {
     background-color: #f73e94;
-    width: 18%;
+    width: 23%;
     height: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Sucursal-item img{
+    max-width: 90%;
+    height: 50%;
 }
 
 footer{
@@ -230,11 +252,11 @@ footer{
 
 footer article{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: -90px auto 10px;
-    min-height: 180px;
+    margin: 10px auto 10px;
+    min-height: 100px;
     width: 70vw;
     padding: 20px 30px 40px;
     border-radius: 16px;
@@ -243,7 +265,7 @@ footer article{
 
 footer article h2{
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 400px;
     text-align: center;
     color: #c23275;
 }
@@ -254,7 +276,7 @@ footer article button{
     justify-content: space-between;
     gap: 10px;
     padding: 0 20px 0 24px;
-    background-color: c23275;
+    background-color: #ffffff;
     border: 0;
     border-radius: 30px;
     white-space: nowrap;
@@ -291,35 +313,11 @@ footer section img{
     margin: 0 auto;
 }
 
-@media(width > 530px){
-    footer article {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 30px 40px 30px;
-        margin: -70px 40px 20px;
-        min-height: auto
-    }
-
-    footer article h2{ font-size: 24px;}
-    footer section { margin-bottom: 50px;}
-    footer section img {margin: 0 0 30px;}
-
-    footer section ul{
-        grid-template-columns: repeat(4, 1fr);
-        padding-right: 0;
-        place-items: start;
-        text-align: left;
-    }
-
-    .Social {
-        top: 37px;
-        left: 216px;
-        bottom: auto;
-        font-size: 18px;
-        gap: 3vw;
-        translate: 0;
-        padding-left: 24px;
-        border-left: 1px solid #c232756b;
-    }
+footer article {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px 30px;
+    margin: -70px 40px 20px;
+    min-height: auto
 }
