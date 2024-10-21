@@ -1,0 +1,13 @@
+@import "Sass/_Variables.scss";
+@import "Sass/_Mixin.scss";
+@import "Sass/_Detalles.scss";
+
+*{
+    margin: 0 0;
+    padding: 0;
+    font-family: FuenteL-general;
+}
+
+body{
+    background-color: ;
+}

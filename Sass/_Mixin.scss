@@ -1,0 +1,21 @@
+/*2 mixin con argumentos - 2 mixin sin argumentos */
+@mixin ConfigLetras($colorL, $fuenteL, $tamañoL, $alinL){
+    color: $colorL;
+    font-family: $fuenteL;
+    font-size: $tamañoL;
+    text-align: $alinL;
+}
+
+@mixin ConfigImagenes($widthImg, $heigthImg){
+    width: $widthImg;
+    height: $heigthImg;
+}
+
+@mixin MenuEnlaces{
+    text-decoration: none;
+    font-size: 20px;
+    color: $ColorPrincipal;
+    padding: 5px;
+}
+
+/*4 import*/

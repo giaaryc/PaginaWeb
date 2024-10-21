@@ -1,11 +1,13 @@
+@import "Sass/_var.scss";
+
 * {             /*Selector universal*/
     margin: 0 0;
     padding: 0;
-    font-family: "Patrick Hand", "Modern Love Caps";
+    font-family: FuenteL-general;
 }
 
 .FondoPastel {      /*Selector de clase*/
-    background-color: #ffcbe8;
+    background-color: ColorExtra;
     background-size: auto;
 }
 
@@ -57,7 +59,7 @@ header{
 }
 
 nav {
-    background-color: #f73e94;
+    background-color: ColorPrincipal;
     width: 100%;
     height: 30px;
     text-align: center;
@@ -121,7 +123,7 @@ main{
 }
 
 .Productos-item{
-    background-color: #93dae4;
+    background-image: url(imagenes/Fondo.png);
     width: 18.2%;
     height: 90%;
     margin: 0 auto;
@@ -131,6 +133,9 @@ main{
     flex-direction: column;
     align-items: center; 
     padding: 5px;
+    border: 4px dashed white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .Productos-item:hover{
@@ -147,7 +152,7 @@ main{
 }
 
 .Productos-item:hover img{
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 20px rgb(253, 109, 210);
     transform:scale(1.2);
 }
 
@@ -158,9 +163,11 @@ main{
 }
 
 .Productos-item:hover h2{
-    margin-top: 30px;
+    margin-top: 60px;
     transform: scale(1.1); /* Escala del texto */
     text-shadow: 0 0 10px white; /* Sombra del texto */
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
 }
 
 #Promesas {
@@ -168,13 +175,14 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 20px; /* Espacio entre los items */
+    gap: 20px; /*Espacio entre los items */
     padding: 40px;
 }
 
 .Promesas-item {
-    background-color: #bffafe;
+    background-color: #ffffff;
     border-radius: 50%; 
+    border: 10px solid #ff74b5;
     width: 250px;
     height: 250px;
     display: flex;
@@ -228,7 +236,13 @@ main{
     border-radius: 10px;
     margin-bottom: 15px; 
     justify-self: center;
-    filter: drop-shadow(5px 5px 40px white);
+    filter: drop-shadow(5px 5px 40px white);    /*Para bordes de la foto no del cuadrado*/
+    transition: transform 0.6s linear;
+}
+
+.Recomendacion-item img:hover{
+    filter: drop-shadow(10px 10px 50px rgb(255, 252, 83));    /*Para bordes de la foto no del cuadrado*/
+    transform:scale(1.2);
 }
 
 .Recomendacion-item h3 {
@@ -287,6 +301,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: white 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .Sucursal-item img{
@@ -391,5 +408,3 @@ footer p{
     padding: 2px 0;
     color: #682040;
 }
-
-

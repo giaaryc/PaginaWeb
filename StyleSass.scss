@@ -1,21 +1,412 @@
-$ColorPrincipal: #682040;
-$ColorSecundario: #f73e94;
-$ColorTerciario: white;
+@import "Sass/var";
+@import "Sass/Mixin";
+@import "Sass/Detalles";
 
-$EspacioL-estandar: 2px;
-
-$TamañoL-estandar: 18px;
-$TamañoL-mediano: 22px;
-$TamañoL-grande: 28px;
-
-@mixin ConfigLetras($colorL, $fuenteL, $tamañoL, $alinL){
-    color: $colorL;
-    font-family: $fuenteL;
-    font-size: $tamañoL;
-    text-align: $alinL;
+* {             /*Selector universal*/
+    margin: 0 0;
+    padding: 0;
+    font-family: $FuenteL-general;
 }
 
-@mixin ConfigImagenes($widthImg, $heigthImg){
-    width: $widthImg;
-    height: $heigthImg;
+.FondoPastel {      /*Selector de clase*/
+    background-color: $ColorExtra;
+    background-size: auto;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+h1{
+    font-size: 35px;
+    margin-top: 60px;
+    font-family: $FuenteL-subtitulos;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+p {
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color: $ColorPrincipal;
+    font-size: 20px;
+}
+
+a:hover{
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+button:hover{
+    background-color: $ColorExtra;
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+}
+
+header{
+    background-image: url(imagenes/Header.jfif);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: $ColorSecundario;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MenuLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.MenuLinks a{
+    max-width: 100%;
+    height: 35px;
+    margin: 0 0px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.LogoSuperior{
+    max-width: 40%;
+    max-height: 40%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 65% 33%;
+    grid-row: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#TituloBienvenida{
+    grid-column: span 2;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 0 0 30px hsl(307, 100%, 92%), 0 0 40px #f55491, 0 0 50px #ff1f88, 0 0 60px #ff038e;
+    font-family: $FuenteL-titulos;
+    letter-spacing: 4px;
+}
+
+.TituloSeccon{
+    grid-column: span 2;
+}
+
+/* PRODUCTOS / CATALOGO */
+#Productos{
+    grid-column: span 2;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 400px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.Productos-item{
+    background-image: url(imagenes/Fondo.png);
+    width: 18.2%;
+    height: 90%;
+    margin: 0 auto;
+    -webkit-transition: 0.6s linear;
+    transition: 0.6s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 5px;
+    border: 4px dashed white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Productos-item:hover{
+    padding: 30px;
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+}
+
+.Productos-item img{
+    margin-top: 10px;
+    width: 98%;
+    height: 80%;
+    transition: transform 0.6s linear;
+}
+
+.Productos-item:hover img{
+    box-shadow: 0 0 20px rgb(253, 109, 210);
+    transform:scale(1.2);
+}
+
+.Productos-item h2{
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 0.6s linear, text-shadow 0.6s linear;
+}
+
+.Productos-item:hover h2{
+    margin-top: 60px;
+    transform: scale(1.1); /* Escala del texto */
+    text-shadow: 0 0 10px white; /* Sombra del texto */
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#Promesas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /*Espacio entre los items */
+    padding: 40px;
+}
+
+.Promesas-item {
+    background-color: #ffffff;
+    border-radius: 50%; 
+    border: 10px solid #ff74b5;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.Promesas-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Promesas-item h3 {
+    font-size: 19px;
+    color: $ColorPrincipal;
+}
+
+#Recomendacion {
+    background-color: rgb(255, 254, 186);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 5px;
+}
+
+.Recomendacion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.Recomendacion-item h2 {
+    text-align: center;
+    margin-bottom: 12px; 
+    font-size: 24px; 
+}
+
+.Recomendacion-item img {
+    max-width: 90%;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px; 
+    justify-self: center;
+    filter: drop-shadow(5px 5px 40px white);    /*Para bordes de la foto no del cuadrado*/
+    transition: transform 0.6s linear;
+}
+
+.Recomendacion-item img:hover{
+    filter: drop-shadow(10px 10px 50px rgb(255, 252, 83));    /*Para bordes de la foto no del cuadrado*/
+    transform:scale(1.2);
+}
+
+.Recomendacion-item h3 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 18px; 
+}
+
+/*NOVEDADES*/
+#Novedades{
+    grid-column: span 2;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 650px;
+    padding: 10px;
+}
+
+.Novedades-item{
+    width: 30%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.Novedades-item img{
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid $ColorTerciario;
+}
+
+.Novedades-item h2, .Novedades-item p {
+    text-align: center;
+    padding: 15px;
+}
+
+/*SUCURSALES*/
+#Sucursales{
+    grid-column: span 2;
+    background-color: #dca0e2;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    height: 500px;
+    padding: 10px;
+}
+
+.Sucursal-item {
+    background-color: #be83c5;
+    width: 23%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: white 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Sucursal-item img{
+    max-width: 90%;
+    height: 50%;
+}
+
+.Sucursal-item p{
+    text-align: center;
+    line-height: 2.5
+}
+
+/* FOOTER */
+footer {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #f73e94;
+    color: #ffffff;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-top: 20px white;
+}
+
+#Btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80vw;
+    border-radius: 30px;
+    background-color: #f37cb4; 
+    text-align: center;
+}
+
+#Btn h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #682040;
+}
+
+#Btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: $ColorTerciario;
+    color: $ColorPrincipal;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    gap: 10px;
+}
+
+#Links {
+    position: relative;
+    padding: 0 180px 30px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.Social {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.Social a{
+    border: none;
+}
+.Social img {
+    display: block;
+    height: 32px;
+    margin-bottom: 30px;
+}
+
+.Informacion h3, .Catalogo h3, .Especiales h3, .Navegador h3{
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding-bottom: 20px;
+} 
+
+.Informacion li, .Catalogo li, .Especiales li, .Navegador li{
+    padding: 2px 0;
+    color: #682040;
 }
