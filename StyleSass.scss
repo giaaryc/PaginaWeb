@@ -1,0 +1,21 @@
+$ColorPrincipal: #682040;
+$ColorSecundario: #f73e94;
+$ColorTerciario: white;
+
+$EspacioL-estandar: 2px;
+
+$TamañoL-estandar: 18px;
+$TamañoL-mediano: 22px;
+$TamañoL-grande: 28px;
+
+@mixin ConfigLetras($colorL, $fuenteL, $tamañoL, $alinL){
+    color: $colorL;
+    font-family: $fuenteL;
+    font-size: $tamañoL;
+    text-align: $alinL;
+}
+
+@mixin ConfigImagenes($widthImg, $heigthImg){
+    width: $widthImg;
+    height: $heigthImg;
+}
