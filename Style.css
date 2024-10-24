@@ -369,6 +369,37 @@ form h1{         /*Selector de tipo*/
 .Vertical-item img{
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.Vertical-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.Vertical-item:hover img{
+    filter: grayscale(1)
+    brightness(0.4);
+}
+
+.Vertical-item:hover ::after{
+    opacity: 1;
+    inset: 20px;
+}
+.Vertical-item:hover .Contenido h2{
+    scale: 1;
+    opacity: 1;
+}
+
+.Vertical-item:hover .Contenido p{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .Historia-item{
@@ -398,16 +429,42 @@ form h1{         /*Selector de tipo*/
     height: 520px;
     text-align: center;
     border: #f7dd6e solid 5px;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
 }
 
 .Informacion-item img {
     max-width: 60%;
     max-height: 60%;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
 }
+
+.Informacion-item img:hover{
+    opacity: 0.2;
+}
+
+.Informacion-item h2{
+    text-align: center;
+    font-size: 30px;
+    -webkit-transition: font-size 1s ease;
+    transition: font-size 1s ease;
+}
+
+.Informacion-item h2:hover{
+    font-size: 35px;
+}
+
 
 .InfoExtra-item h2{
     text-align: center;
     font-size: 35px;
+    -webkit-transition: font-size 1s ease;
+    transition: font-size 1s ease;
+}
+
+.InfoExtra-item h2:hover{
+    font-size: 40px;
 }
 
 /* */
