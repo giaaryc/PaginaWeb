@@ -449,10 +449,12 @@ form h1{         /*Selector de tipo*/
     font-size: 30px;
     -webkit-transition: font-size 1s ease;
     transition: font-size 1s ease;
+    opacity: 0;
 }
 
 .Informacion-item h2:hover{
     font-size: 35px;
+    opacity: 100;
 }
 
 
