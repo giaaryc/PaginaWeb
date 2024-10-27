@@ -164,41 +164,123 @@
             </section>
             <!--recomendacion-->
             <section>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <figure class="figure">
-                                <img src="/imagenes/Recomendacion1.png" class="figure-img img-fluid rounded" alt="...">
-                                <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                            </figure>
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Cupcake preparado con ingredientes veganos. blablablabla</div>
+                <div class="card-group">
+                    <div class="card">
+                        <img src="/imagenes/Recomendacion1.png" class="card-img-top" alt="Cupcake recomendado">
+                        <div class="card-body">
+                            <h5 class="card-title">Cupcake Bosque encantado</h5>
+                            <p class="card-text">Irresistible cupcake de chocolate esponjoso, cubierto con una suave crema de vainilla y decorado con una mezcla de frambuesas, moras y fresas frescas. Perfecto para los amantes del chocolate con un toque de frescura de frutos rojos.</p>
+                            <p class="card-text">$7.000 (6 unidades)</p>
+                            <p class="card-text">$12.500 (12 unidades)</p>
+                            <p class="card-text">$23.000 (24 unidades)</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                Comprar
+                            </button>
+                        </div>
                     </div>
+                    <div class="card">
+                        <img src="/imagenes/Recomendacion2.png" class="card-img-top" alt="Pastel recomendado">
+                        <div class="card-body">
+                            <h5 class="card-title">Pastel Calabaza macabra</h5>
+                            <p class="card-text">Este pastel de calabaza combina la suavidad de la calabaza con especias otoñales y está decorado con detalles de Halloween, incluyendo un glaseado negro y figuras de murciélagos. Una opción deliciosa y temáticamente espeluznante, ideal para cualquier celebración de octubre.</p>
+                            <p class="card-text">$12.000 (6 unidades)</p>
+                            <p class="card-text">$22.500 (12 unidades)</p>
+                            <p class="card-text">$40.000 (24 unidades)</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    <div class="card">
+                        <img src="/imagenes/Recomendacion3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Galletas Sonrisa vampírica</h5>
+                            <p class="card-text">Galletas de chocolate rellenas de crema y malvaviscos, decoradas con colmillos de vampiro para un aspecto terrorífico y divertido. Perfectas para fiestas de Halloween o para dar un toque divertido a cualquier reunión en esta temporada.</p>
+                            <p class="card-text">$5.000 (6 unidades)</p>
+                            <p class="card-text">$9.500 (12 unidades)</p>
+                            <p class="card-text">$14.000 (24 unidades)</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                    </div>
-                </div>
-                </div>
+                    <!--FOrmulario para la compra-->
+                    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="staticBackdropLabel">Formulario de compra</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div>
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <label for="inputUsuario" class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" id="inputUsuario" required>
+                                    </div>
+                                    <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="inputAddress" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                    <label for="inputComuna" class="form-label">Comuna</label>
+                                    <input type="text" class="form-control" id="inputComuna" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                    <label for="inputRegion" class="form-label">Región</label>
+                                    <select id="inputRegion" class="form-select" required>
+                                        <option selected>Elegir...</option>
+                                        <option>Atacama</option>
+                                        <option>Valparaiso</option>
+                                        <option>Santiago</option>
+                                        <option>Biobío</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputPhone" class="form-label">Tel.</label>
+                                        <input type="tel" class="form-control" id="inputPhone" required>            
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="btnradio1">6 unidades</label>
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio2">12 unidades</label>
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio3">24 unidades</label>
+                                    </div> 
+                                    <div class="col-12">
+                                        <label class="input-text">Mensaje</label>
+                                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                        Confirmar datos
+                                        </label>
+                                    </div>
+                                    </div>
+                                    <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Realizar compra</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>            
             </section>
             <!--novedades/ ira en la parte superior-->
             <section>
@@ -261,8 +343,8 @@
             </section>
             <!--sucursales-->
             <section>            
-                    <div class="row row-cols-1 row-cols-md-4 g-4">
-                        <div class="col">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
                         <div class="card h-100">
                         <!--Cambiar tamaño imagen-->
                         <img src="/imagenes/Atacama.jpeg" class="card-img-top" alt="Atacama">
@@ -273,44 +355,44 @@
                             <p class="card-text">✉️ atacama@deliciasgiamgiam.cl</p>
                             </div>
                         </div>
-                        </div>
-                        <div class="col">
-                        <div class="card h-100">
+                    </div>
+                <div class="col">
+                    <div class="card h-100">
                         <!--Cambiar tamaño imagen-->
                         <img src="/imagenes/Valpo.jpeg" class="card-img-top" alt="Valparaiso">
-                            <div class="card-body">
+                        <div class="card-body">
                             <h5 class="card-title">Valparaiso</h5>
                             <p class="card-text">📍 Calle de los Dulces 123, Cerro Alegre, Valparaíso, Chile.</p>
                             <p class="card-text">📞 +56 32 299 0001</p>
                             <p class="card-text">✉️ valparaiso@deliciasgiamgiam.cl</p>
-                            </div>
                         </div>
-                        </div>
-                        <div class="col">
-                        <div class="card h-100">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
                         <!--Cambiar tamaño imagen-->
                         <img src="/imagenes/Santiago.jfif" class="card-img-top" alt="Santiago">
-                            <div class="card-body">
+                        <div class="card-body">
                             <h5 class="card-title">Santiago</h5>
                             <p class="card-text">📍 Avenida de los Pasteles 456, Las Condes, Santiago, Chile.</p>
                             <p class="card-text">📞 +56 2 3245 6789</p>
                             <p class="card-text">✉️ santiago@deliciasgiamgiam.cl</p>
-                            </div>
                         </div>
-                        </div>
-                        <div class="col">
-                        <div class="card h-100">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
                         <!--Cambiar tamaño imagen-->
                         <img src="/imagenes/Biobio.jfif" class="card-img-top" alt="Biobío">
-                            <div class="card-body">
+                        <div class="card-body">
                             <h5 class="card-title">Biobío</h5>
                             <p class="card-text">📍 Calle de la Confitería 789, Centro, Concepción, Biobío, Chile.</p>
                             <p class="card-text">📞 +56 41 322 1112</p>
                             <p class="card-text">✉️ biobio@deliciasgiamgiam.cl</p>
-                            </div>
-                        </div>
                         </div>
                     </div>
+                    </div>
+                </div>
             </section>
         </main>
         <!--!FOOTER-->
