@@ -7,14 +7,14 @@
     <title>Inicio Propio</title>
 </head>
 
-<body>
+<body class="body-principal">
     <header>
-        <img class="LogoSuperior" src="/imagenes/Logo.png" alt="Logo de la tienda">
+        <div class="container-fluid d-flex justify-content-center align-item-center bg-fondo-arcoiris" >
+            <img class="LogoSuperior" src="/imagenes/Logo.png" alt="Logo de la tienda">
+        </div>
+
         <nav class="navbar navbar-expand-lg bg-color-secundario">
             <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <h4>Delicias Giam Giam</h4>
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,10 +49,10 @@
         </nav>
 </header>
 
-    <main>
-        <h1 id="TituloBienvenida">¡Bienvenido a nuestra tienda online!</h1>
+    <main class="container my-5">
+        <h1 id="TituloBienvenida class-center mb-4">¡Bienvenido a nuestra tienda online!</h1>
 
-        <section id="Novedades">
+        <section id="Novedades" class="row">
             <!--novedades/ ira en la parte superior-->
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -114,7 +114,7 @@
 
         <h1 class="TituloSeccion">¡Conoce nuestras especialidades!</h1>
 
-        <section id="Productos">
+        <section id="Productos" class="row text-center">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                     <img src="/imagenes/Pastel.jfif" alt="Pasteles" class="img-fluid me-3">
@@ -161,8 +161,8 @@
 
         <h1>¡Te aseguramos que!</h1>
         <h1 >¡Recomendaciones del día!</h1>
-        
-        <section id="Recomendacion">
+
+        <section id="Recomendacion" class="row text-center my-5">
         <!--recomendacion-->
                 <div class="card-group">
                     <div class="card">
@@ -175,9 +175,11 @@
                             <p class="card-text">$23.000 (24 unidades)</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                                Comprar
-                            </button>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comprar
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -191,10 +193,11 @@
                         </div>
                         <div class="card-footer">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                                    Comprar
-                                </button>
-                            </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                        Comprar
+                                    </button>
+                                </div>                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -208,10 +211,11 @@
                         </div>
                         <div class="card-footer">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                                    Comprar
-                                </button>
-                            </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                        Comprar
+                                    </button>
+                                </div>                            </div>
                         </div>
                     </div>
                     <!--FOrmulario para la compra-->
@@ -287,7 +291,7 @@
         </section>
 
         <h1 class="TituloSeccion">¡Descubre donde están nuestras sucursales !</h1>
-        <section id="Sucursales">
+        <section id="Sucursales" class="row text-center">
             <!--sucursales-->
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
@@ -342,75 +346,87 @@
         </section>
     </main>
 
-    <footer class="bg-light py-5">
-        <div class="container">
-            <!-- Sección de botón destacado -->
-            <section id="Btn" class="text-center mb-4">
+    <!-- 
+    bg-color-secundario = fondo del color que perzonalice
+    py-5 = padding superior e inferior
+    px-4 = padding derecho e izquierdo
+    -->
+    <footer class="bg-color-secundario py-5 px-4">
+        <div class="container-fluid">
+            <!-- 
+            text-center = centrar texto
+            mb-4 = margen inferior
+            -->
+            <section id="Btn" class="text-center mb-4 text-color-principal">
                 <h2 class="mb-3">¿Se te antoja alguna de nuestras delicias?</h2>
-                <button class="btn btn-primary btn-lg">
-                    <h2 class="d-inline">¡Haz tu pedido aquí!</h2>
+                <button class="btn btn-light btn-lg">
+                    <!--
+                    btn-primary = color azul
+                    btn-lg = tamaño del boton
+                    d-inline = elemento en linea
+                    -->
+                    <h2 class="d-inline text-color-principal">¡Haz tu pedido aquí!</h2>
                     <span>→</span>
                 </button>
             </section>
-            
-            <!-- Sección de enlaces principales organizada en columnas -->
+            <!-- 
+            row = fila
+            col-12 = columna de todo el ancho (maximo)
+            col-md-3 = columna (pantalla mediana) de 3 de ancho
+            -->
             <section id="Links" class="row mb-5">
-                <!-- Información -->
                 <div class="col-12 col-md-3 mb-3">
-                    <h3>Conócenos</h3>
+                    <h3 class="text-color-principal text-center">Conócenos</h3>
+                    <!-- list-unstyled = le quita los puntitos a la lista -->
                     <ul class="list-unstyled">
-                        <li><a href="Nosotros.html" class="text-dark">Quiénes somos</a></li>
-                        <li><a href="#" class="text-dark">Preguntas frecuentes</a></li>
-                        <li><a href="#" class="text-dark">Comentarios</a></li>
-                        <li><a href="#" class="text-dark">Link 1</a></li>
+                        <li><a href="Nosotros.html" class="text-color-principal text-decoration-none">Quiénes somos</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Comentarios</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Link 1</a></li>
                     </ul>
                 </div>
-                <!-- Catálogo -->
                 <div class="col-12 col-md-3 mb-3">
-                    <h3>Nuestros productos</h3>
+                    <h3 class="text-color-principal text-center">Nuestros productos</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Galletas</a></li>
-                        <li><a href="#" class="text-dark">Cupcakes y Muffins</a></li>
-                        <li><a href="#" class="text-dark">Tartas</a></li>
-                        <li><a href="#" class="text-dark">Postres veganos y/o sin gluten</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Galletas</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Cupcakes y Muffins</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Tartas</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Postres veganos y/o sin gluten</a></li>
                     </ul>
                 </div>
-                <!-- Especiales -->
                 <div class="col-12 col-md-3 mb-3">
-                    <h3>Acompáñanos</h3>
+                    <h3 class="text-color-principal text-center">Acompáñanos</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Eventos</a></li>
-                        <li><a href="#" class="text-dark">Cursos</a></li>
-                        <li><a href="#" class="text-dark">Sorpresas</a></li>
-                        <li><a href="#" class="text-dark">...</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Eventos</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Cursos</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">Sorpresas</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
                     </ul>
                 </div>
-                <!-- Navegación -->
                 <div class="col-12 col-md-3 mb-3">
-                    <h3>Navegación</h3>
+                    <h3 class="text-color-principal text-center">Navegación</h3>
                     <ul class="list-unstyled">
-                        <li><a href="indexPropio.html" class="text-dark">Inicio</a></li>
-                        <li><a href="Login.html" class="text-dark">Iniciar Sesión</a></li>
-                        <li><a href="#" class="text-dark">...</a></li>
-                        <li><a href="#" class="text-dark">...</a></li>
+                        <li><a href="indexPropio.html" class="text-color-principal text-decoration-none">Inicio</a></li>
+                        <li><a href="Login.html" class="text-color-principal text-decoration-none">Iniciar Sesión</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
+                        <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
                     </ul>
                 </div>
             </section>
-            
-            <!-- Sección de redes sociales -->
             <section class="Social text-center mb-4">
-                <a href="#" class="mx-2"><img src="imagenes/face.png" alt="Facebook" class="img-fluid"></a>
-                <a href="#" class="mx-2"><img src="imagenes/wsp.png" alt="WhatsApp" class="img-fluid"></a>
-                <a href="#" class="mx-2"><img src="imagenes/instagram.png" alt="Instagram" class="img-fluid"></a>
-                <a href="#" class="mx-2"><img src="imagenes/tiktok.png" alt="TikTok" class="img-fluid"></a>
-                <a href="#" class="mx-2"><img src="imagenes/correo.png" alt="Correo" class="img-fluid"></a>
+                <!--img-fluid = para que sea 100% (responsiva)-->
+                <a href="#" class="mx-2"><img src="/imagenes/face.png" alt="Facebook" class="img-fluid"></a>
+                <a href="#" class="mx-2"><img src="/imagenes/wsp.png" alt="WhatsApp" class="img-fluid"></a>
+                <a href="#" class="mx-2"><img src="/imagenes/instagram.png" alt="Instagram" class="img-fluid"></a>
+                <a href="#" class="mx-2"><img src="/imagenes/tiktok.png" alt="TikTok" class="img-fluid"></a>
+                <a href="#" class="mx-2"><img src="/imagenes/correo.png" alt="Correo" class="img-fluid"></a>
             </section>
-            
-            <!-- Texto final de derechos reservados -->
             <div class="text-center">
                 <p>&copy; 2024 Giarella Varas C.</p>
             </div>
         </div>
     </footer>
+        <!--COSA DEL BOOTSTRAP-->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     </body>
 </html>

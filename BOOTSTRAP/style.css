@@ -12821,4 +12821,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+header {
+  background-image: url("/imagenes/Header.jfif");
 }/*# sourceMappingURL=style.css.map */
