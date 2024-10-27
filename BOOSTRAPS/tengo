@@ -6,7 +6,7 @@ COMPONENTES (8):
 - Grupo de listas
 - Botones
 - Grupo de botones
--
+- Progress
 
 
 CONTENIDO (5):
@@ -26,7 +26,7 @@ LAYAOUT (6):
 -
 
 INPUT (4):
--
--
--
--
+- Email
+- textarea
+- check
+- 
