@@ -35,6 +35,8 @@ $fondo-principal: map-get($custom-fondo, "fondo-pasteles");
 // Importa Bootstrap después de definir las variables personalizadas
 @import "./node_modules/bootstrap/scss/bootstrap";
 
+@import "/BOOTSTRAP/style.scss";
+
 header{
     background-image: url("/imagenes/Header.jfif");
 }
@@ -47,5 +49,4 @@ header{
     max-width: 40%;
     max-height: 40%;
 }
-
 
