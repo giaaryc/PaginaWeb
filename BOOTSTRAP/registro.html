@@ -12,9 +12,14 @@
             height: 32px;
             width: 32px;
         }
+        .container-especial{
+            align-items: center;
+            width: 50%;
+            height: auto;
+        }
     </style>
 </head>
-<body>
+<body class="body-secundario">
     <div class="container-fluid">
         <header>
             <div class="container-fluid d-flex justify-content-center align-item-center bg-fondo-arcoiris" >
@@ -56,7 +61,63 @@
                 </div>
             </nav>
         </header>
-
+        <main class="d-flex justify-content-center" >
+            <div class="container-especial bg-color-extra1 mt-5 py-6 px-4">
+                <h2 class="display-6 text-center py-3 my-3">REGISTRO</h2>
+                <form class="row g-3">
+                    <div class="form-group col-12">
+                        <label for="nombreCompleto">Nombre y Apellido</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre" required>
+                            <input type="text" class="form-control" placeholder="Apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ej: 123456789" required>
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputGroupSelect01">Región</label>
+                        <select class="form-select custom-input" id="inputGroupSelect01" required>
+                            <option selected disabled value="">Seleccione</option>
+                            <option value="1">Atacama</option>
+                            <option value="2">Valparaíso</option>
+                            <option value="3">Metropolitana</option>
+                            <option value="4">Biobío</option>
+                            <option value="5">Otra</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="validationDefault03">Ciudad</label>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="validationDefault03">Perfil</label>
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inputPassword5">Contraseña</label>
+                        <input type="password" id="inputPassword5" class="form-control" required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Tu contraseña debe tener entre 8 y 20 caracteres.
+                        </small>                    
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inputPassword5">Confirmar contraseña</label>
+                        <input type="password" id="inputPassword5" class="form-control" required>                
+                    </div>
+                    <div class="form-check form-switch col-8">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Recibir notificaciones</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg col-4 my-3">Enviar</button>
+                </form>            
+            </div>
+        </main>
         <footer class="bg-color-secundario py-5 px-4 mt-5">
             <div class="container-fluid">
                 <section id="Links" class="row mb-5">
