@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                 </li>
@@ -47,39 +47,38 @@
             </div>
             </div>
         </nav>
-</header>
+    </header>
 
-    <main class="container my-5">
-        <h1 id="TituloBienvenida class-center mb-4">¡Bienvenido a nuestra tienda online!</h1>
-
+    <main class="container-fluid">
         <section id="Novedades" class="row">
             <!--novedades/ ira en la parte superior-->
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleAutoplaying" class="carousel slide w-100" data-bs-ride="carousel" style="height: 550px; object-fit: cover;">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <!--Cambiar tamaño imagen-->
-                        <img src="/imagenes/Cursos.png" class="d-block w-100 img-fluid" alt="Aviso inscripciones cursos">
-                        <div class="carousel-caption d-none d-md-block">
-                            <!--Cambiar color o fondo al texto para que se vea-->
-                            <h5>🎓¡Rapido Rapido ven y conviértete en Maestro Pastelero</h5>
-                            <p>🌟 ¡Inscríbete a nuestros cursos de pastelería! Hemos abierto una nueva sección en nuestra pastelería para ayudar a todos y todas a cumplir sus sueños, tal como nosotras lo hicimos. Aprende desde tortas y masas hasta chocolatería y decoración de pasteles. ¡Te esperamos! 🍰🎂</p>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <a class="btn btn-primary" href="#" role="button">Inscríbete ahora</a>
-                            <a class="btn btn-primary" href="#" role="button">Más información</a>
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <!--Cambiar tamaño imagen-->
+                            <img src="/imagenes/Cursos.png" class="d-block w-100 h-100" alt="Aviso inscripciones cursos">
+                            <!--d-none = ?-->
+                            <div class="carousel-caption d-none d-md-block bg-color-secundario py-3 px-5">
+                                <!--Cambiar color o fondo al texto para que se vea-->
+                                <h5 class="border-bottom mb-2">🎓¡Rapido Rapido ven y conviértete en Maestro Pastelero</h5>
+                                <p>🌟 ¡Inscríbete a nuestros cursos de pastelería! Hemos abierto una nueva sección en nuestra pastelería para ayudar a todos y todas a cumplir sus sueños, tal como nosotras lo hicimos. Aprende desde tortas y masas hasta chocolatería y decoración de pasteles. ¡Te esperamos! 🍰🎂</p>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a class="btn btn-primary mt-2" href="#" role="button">Inscríbete ahora</a>
+                                <a class="btn btn-primary mt-2" href="#" role="button">Más información</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item h-100">
                         <!--Cambiar tamaño imagen-->
-                        <img src="/imagenes/Evento.jfif" class="d-block w-100 img-fluid" alt="Evento de Halloween">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img src="/imagenes/Evento.jfif" class="d-block w-100 h-100" alt="Evento de Halloween">
+                        <div class="carousel-caption d-none d-md-block bg-color-secundario py-3 px-5">
                             <!--Cambiar color o fondo al texto para que se vea-->
-                            <h5>🎃 ¡Halloween Tenebroso y Delicioso!</h5>
+                            <h5 class="border-bottom mb-2">🎃 ¡Halloween Tenebroso y Delicioso!</h5>
                             <p>👻 ¡BOOO! Un evento tenebroso está por llegar... 🎃 Celebra octubre con nuestros dulces terroríficos. Desde cerebros hasta lombrices comestibles, todo con temática de Halloween. Prepárate para un festín de sabores espeluznantes. ¡No te lo pierdas! 🧠🍬</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a class="btn btn-primary" href="#" role="button">Productos</a>
@@ -87,13 +86,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item h-100">
                         <!--Cambiar tamaño imagen-->
-                        <img src="/imagenes/10Kseguidores.png" class="d-block w-100 img-fluid" alt="Celebración 10k seguidores">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img src="/imagenes/10Kseguidores.png" class="d-block w-100 h-100" alt="Celebración 10k seguidores">
+                        <div class="carousel-caption d-none d-md-block bg-color-secundario py-3 px-5">
                             <!--Cambiar color o fondo al texto para que se vea-->
-                            <h5>🎉 ¡Gracias por los 10K! Descuento Especial para Ti</h5>
-                            <p>🎉 ¡Ya somos 10 mil seguidores en Instagram! ¡Mil gracias por ser parte de esta dulce familia! 💖 Como agradecimiento, esta semana tenemos un 20% de descuento en todas nuestras sucursales. Ven y disfruta de nuestros productos… ¡todo esto es para ti! 🍭</p>
+                            <h5 class="border-bottom mb-2">🎉 ¡Gracias por los 10K! Descuento Especial para Ti</h5>
+                            <p class="mt-5">🎉 ¡Ya somos 10 mil seguidores en Instagram! ¡Mil gracias por ser parte de esta dulce familia! 💖 Como agradecimiento, esta semana tenemos un 20% de descuento en todas nuestras sucursales. Ven y disfruta de nuestros productos… ¡todo esto es para ti! 🍭</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a class="btn btn-primary" href="#" role="button">Descuentos</a>
                                 <a class="btn btn-primary" href="#" role="button">Visítanos</a>
@@ -427,6 +426,6 @@
         </div>
     </footer>
         <!--COSA DEL BOOTSTRAP-->
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="/BOOTSTRAP/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     </body>
 </html>
