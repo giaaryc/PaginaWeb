@@ -19,29 +19,21 @@ $custom-colors: (
     "color-extra6": #f7dd6e
 );
 
-$custom-fondo: (
-    "fondo-arcoiris": url("/imagenes/Header.jfif"),
-    "fondo-formulario": ,
-    "fondo-pasteles": url("/imagenes/Fondo.png")
-);
-
 // Combina los mapas
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-$fondo-header: map-get($custom-fondo, "fondo-arcoiris");
-$fondo-form: map-get($custom-fondo, "fondo-formulario");
-$fondo-principal: map-get($custom-fondo, "fondo-pasteles");
-
 // Importa Bootstrap después de definir las variables personalizadas
 @import "./node_modules/bootstrap/scss/bootstrap";
-
-@import "/BOOTSTRAP/style.scss";
 
 header{
     background-image: url("/imagenes/Header.jfif");
 }
 
 .body-principal{
+    background-image: url("/imagenes/Fondo.png");
+}
+
+.body-secundario{
     background-image: url("/imagenes/FondoRegistro.png");
 }
 

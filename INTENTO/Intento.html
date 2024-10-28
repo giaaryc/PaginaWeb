@@ -21,11 +21,15 @@
             height: 350px;
             filter: drop-shadow(5px 5px 20px rgb(255, 255, 255));    /*Para bordes de la foto no del cuadrado*/
         }
+
+        .card-imgSucursal{
+            height: 200px;
+        }
     </style>
 </head>
 
 <body class="body-principal">
-    <div class="body-principal container-fluid">
+    <div class="container-fluid">
         <header>
             <div class="container-fluid d-flex justify-content-center align-item-center bg-fondo-arcoiris" >
                 <img class="LogoSuperior" src="/imagenes/Logo.png" alt="Logo de la tienda">
@@ -128,10 +132,12 @@
                         </button>
                     </div>
             </section>
-                <!--Productos-->
+
+            <h1 class="text-center display-4 d-block bg-color-extra2 py-4">¡NUESTRA VARIEDAD DE PRODUCTOS!</h1>
+            <!--Productos-->
             <section id="Productos" class="row my-4">
                 <ul class="list-group list-group-horizontal flex-wrap justify-content-center">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <li class="list-group-item d-flex justify-content-between align-items-start bg-color-extra1 border-color-extra2">
                             <img src="/imagenes/Pastel.jfif" alt="Pasteles" class="item-imagen img-fluid me-3">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">Pasteles</div>
@@ -139,7 +145,7 @@
                             </div>
                             <span class="badge text-bg-primary rounded-pill">14</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item d-flex justify-content-between align-items-start bg-color-extra1 border-color-extra2">
                             <img src="/imagenes/Galleta.jfif" alt="Galletas" class="img-fluid item-imagen me-3">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">Galletas</div>
@@ -147,7 +153,7 @@
                             </div>
                             <span class="badge text-bg-primary rounded-pill">14</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item d-flex justify-content-between align-items-start bg-color-extra1 border-color-extra2">
                             <img src="/imagenes/Cupcake.jfif" alt="Cupcake y Muffins" class="img-fluid item-imagen me-3">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">Cupcake y Muffins</div>
@@ -155,7 +161,7 @@
                             </div>
                             <span class="badge text-bg-primary rounded-pill">14</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item d-flex justify-content-between align-items-start bg-color-extra1 border-color-extra2">
                             <img src="/imagenes/Tarta.jfif" alt="Tartas" class="img-fluid item-imagen me-3">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">Tartas</div>
@@ -163,7 +169,7 @@
                             </div>
                             <span class="badge text-bg-primary rounded-pill">14</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item d-flex justify-content-between align-items-start bg-color-extra1 border-color-extra2">
                             <img src="/imagenes/PostreVegano.jfif" alt="Veganos" class="img-fluid item-imagen me-3">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">Veganos</div>
@@ -174,7 +180,7 @@
                     </ul>
                 </section>
     
-            <h1 >¡Recomendaciones del día!</h1>
+            <h1 class="text-center display-4 d-block bg-color-extra6 py-4">¡No te pierdas las recomendaciones del día!</h1>
     
             <section id="Recomendacion" class="row text-center my-5">
             <!--recomendacion-->
@@ -306,14 +312,14 @@
                     </div>            
             </section>
     
-            <h1 class="TituloSeccion">¡Descubre donde están nuestras sucursales !</h1>
-            <section id="Sucursales" class="row text-center">
+            <h1 class="text-center display-4 d-block bg-color-extra4 py-4">¡Descubre donde están nuestras sucursales !</h1>
+            <section id="Sucursales" class="row text-center my-10">
                 <!--sucursales-->
                 <div class="row row-cols-1 row-cols-md-4 g-4">
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 bg-color-extra3">
                         <!--Cambiar tamaño imagen-->
-                            <img src="/imagenes/Atacama.jpeg" class="card-img-top" alt="Atacama">
+                            <img src="/imagenes/Atacama.jpeg" class="card-img-top card-imgSucursal" alt="Atacama">
                                 <div class="card-body">
                                     <h5 class="card-title">Atacama</h5>
                                     <p class="card-text">📍 Calle de los Dulces 123, Cerro Alegre, Valparaíso, Chile.</p>
@@ -323,9 +329,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 bg-color-extra3">
                         <!--Cambiar tamaño imagen-->
-                            <img src="/imagenes/Valpo.jpeg" class="card-img-top" alt="Valparaiso">
+                            <img src="/imagenes/Valpo.jpeg" class="card-img-top card-imgSucursal" alt="Valparaiso">
                             <div class="card-body">
                                 <h5 class="card-title">Valparaiso</h5>
                                 <p class="card-text">📍 Calle de los Dulces 123, Cerro Alegre, Valparaíso, Chile.</p>
@@ -335,9 +341,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 bg-color-extra3">
                         <!--Cambiar tamaño imagen-->
-                            <img src="/imagenes/Santiago.jfif" class="card-img-top" alt="Santiago">
+                            <img src="/imagenes/Santiago.jfif" class="card-img-top card-imgSucursal" alt="Santiago">
                             <div class="card-body">
                                 <h5 class="card-title">Santiago</h5>
                                 <p class="card-text">📍 Avenida de los Pasteles 456, Las Condes, Santiago, Chile.</p>
@@ -347,9 +353,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 bg-color-extra3">
                         <!--Cambiar tamaño imagen-->
-                            <img src="/imagenes/Biobio.jfif" class="card-img-top" alt="Biobío">
+                            <img src="/imagenes/Biobio.jfif" class="card-img-top card-imgSucursal" alt="Biobío">
                                 <div class="card-body">
                                     <h5 class="card-title">Biobío</h5>
                                     <p class="card-text">📍 Calle de la Confitería 789, Centro, Concepción, Biobío, Chile.</p>
@@ -367,22 +373,81 @@
         py-5 = padding superior e inferior
         px-4 = padding derecho e izquierdo
         -->
-        <footer class="bg-color-secundario py-5 px-4">
+        <footer class="bg-color-secundario py-5 px-4 mt-5">
             <div class="container-fluid">
                 <!-- 
                 text-center = centrar texto
                 mb-4 = margen inferior
                 -->
-                <section id="Btn" class="text-center mb-4 text-color-principal">
-                    <h2 class="mb-3">¿Se te antoja alguna de nuestras delicias?</h2>
-                    <button class="btn btn-light btn-lg">
+                <section id="Btn" class="text-center mb-4 text-light">
+                    <h2 class="mb-3">¿Quieres saber sobre los eventos de esta semana?</h2>
+                    <button class="btn btn-light text-color-principal btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">¡Presiona aqui!</button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">¡Lo que nos espera esta semana!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    <div class="offcanvas-body">
+                    <!--Interior del offcanvas-->
+                        <table class="table align-middle">
+                            <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Descripción</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">L</th>
+                                <td>Día de Muffins</td>
+                                <td>10:00AM - 7:00PM</td>
+                                <td>Descuentos en muffins de diferentes sabores durante todo el día</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">M</th>
+                                <td>1X2 Tartas</td>
+                                <td>2:00PM - 7:00PM</td>
+                                <td>Compra una tarta y llevate otra. SOLO POR TIEMPO LIMITADO</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">M</th>
+                                <td>Taller de repostería</td>
+                                <td>5:00PM - 7:00PM</td>
+                                <td>Taller de respostería con inscripción previa</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">J</th>
+                                <td>Día de pareja</td>
+                                <td>10:00AM - 7:00PM</td>
+                                <td>Todas las perejas recibiran un descuento en su compra. SOLO VALIDO EN GALLETAS, CUPCAKES Y MUFFINS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V</th>
+                                <td>Degustación gratutita</td>
+                                <td>6:00PM - 7:00PM</td>
+                                <td>Degustación gratuita de nuevos sabores para postres. POR TIEMPO LIMITADO</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">S</th>
+                                <td>Día familiar</td>
+                                <td>12:00PM - 5:00PM</td>
+                                <td>Descuento para familias en pastel seleccionado</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">D</th>
+                                <td colspan="4">CERRADO</td>
+                            </tr>
+                            </tbody>
+                        </table>                
+                    </div>
+                    </div>    
                         <!--
                         btn-primary = color azul
                         btn-lg = tamaño del boton
                         d-inline = elemento en linea
                         -->
-                        <h2 class="d-inline text-color-principal">¡Haz tu pedido aquí!</h2>
-                        <span>→</span>
                     </button>
                 </section>
                 <!-- 
