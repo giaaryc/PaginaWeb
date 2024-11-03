@@ -9,6 +9,12 @@ h3, h2{
     letter-spacing: 3px;
 }
 
+h2:hover{
+    font-size: 35px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
 h1{
     text-shadow: 0 0 30px hsl(331, 92%, 65%), 0 0 40px #fb8ab6, 0 0 50px #ffffff, 0 0 60px #ffffff;
     font-family: 'Pacifico', cursive;
@@ -25,6 +31,9 @@ a:hover{
     border-bottom: 2px solid white;
 }
 
+.p-letra, .btn-letra{
+    font-size: 22px;
+}
 
 /* Formulario Login */
 #Login{
@@ -110,6 +119,11 @@ a:hover{
 .img-social{
     height: 32px;
     width: 32px;
+}
+
+.img-social:hover{
+    scale: 1.4;
+    filter: drop-shadow(5px 5px 20px rgb(255, 255, 255));    /*Para bordes de la foto no del cuadrado*/
 }
 
 .img-SobreNosotros{
