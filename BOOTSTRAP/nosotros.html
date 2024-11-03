@@ -12,6 +12,11 @@
             width: 32px;
         }
 
+        .img-SobreNosotros{
+            height: 30%;
+            width: 30%;
+        }
+
     </style>
 </head>
 <body class="body-principal">
@@ -50,8 +55,11 @@
         </header>
         <main>
             <!--ajustar tamaño imagenes-->
-            <section id="SobreNosotros">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+            <section id="SobreNosotros" class="row my-10">
+                <div class="col-6">
+                    <video src="/videos/video pasteleria.mp4" class="Video col-12" autoplay controls muted></video>
+                </div>
+                <div class="accordion accordion-flush col-6" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -60,7 +68,7 @@
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <img src="/imagenes/vision.png" alt="Visión">
+                            <img src="/imagenes/vision.png" alt="Visión" class="img-SobreNosotros">
                             Aspiramos a ser la pastelería de referencia en nuestra comunidad, reconocida por la calidad de nuestros productos y por crear momentos memorables para nuestros clientes. Queremos expandirnos a nuevas localidades, llevando nuestra pasión por la repostería a más familias y celebraciones.
                         </div>
                         </div>
@@ -73,8 +81,17 @@
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <img src="/imagenes/mision.png" alt="misión">
-                            Nuestra misión en "Delicias GIAM GIAM" es ofrecer un lugar cálido y acogedor donde cada cliente pueda disfrutar de pasteles y postres elaborados con ingredientes frescos y recetas tradicionales, transmitiendo el amor y dedicación de nuestra familia en cada bocado</div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="/imagenes/vision.png" alt="Visión" class="img-fluid img-SobreNosotros">
+                                </div>
+                                <div class="col-8">
+                                    <p>
+                                        Aspiramos a ser la pastelería de referencia en nuestra comunidad, reconocida por la calidad de nuestros productos y por crear momentos memorables para nuestros clientes. Queremos expandirnos a nuevas localidades, llevando nuestra pasión por la repostería a más familias y celebraciones.
+                                    </p>
+                                </div>
+                            </div>                        
+                        </div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -85,7 +102,7 @@
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <img src="/imagenes/equipo.png" alt="">
+                            <img src="/imagenes/equipo.png" alt="Equipo" class="img-SobreNosotros">
                             En "Delicias GIAM GIAM", contamos con un equipo apasionado y comprometido que hace posible cada creación. Giarella y Marianna, las fundadoras, lideran la producción con su amor por la repostería y su creatividad. Nuestro talentoso equipo de pasteleros y personal de atención al cliente trabaja en conjunto para ofrecer una experiencia excepcional a cada visitante, creando un ambiente acogedor donde la dulzura y la calidez son siempre bienvenidas.</div>
                         </div>
                     </div>
@@ -97,17 +114,17 @@
                         </h2>
                         <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <img src="/imagenes/compromiso.png" alt="Compromisos">
+                            <img src="/imagenes/compromiso.png" alt="Compromisos" class="img-SobreNosotros">
                             En "Delicias GIAM GIAM", nos dedicamos a ofrecer productos de alta calidad, utilizando los mejores ingredientes y recetas tradicionales. Nuestro equipo trabaja con pasión para que cada pastel y postre sea una experiencia memorable. Además, nos comprometemos a ser un pilar en nuestra comunidad, apoyando causas locales y compartiendo la dulzura de la repostería con todos.</div>
                         </div>
                     </div>
                 </div>    
             </section>
             
-            <section id="TopVentas">
-                <table class="table caption-top">
+            <section id="TopVentas" class="container">
+                <table class="table caption-top border-color-extra2">
                     <caption>Top productos más vendidos de la semana</caption>
-                    <thead>
+                    <thead class="bg-primary text-light">
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
@@ -117,7 +134,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table-color-extra3">
                             <th scope="row">1°</th>
                             <td>Tentación de Chocolate Épico</td>
                             <td>450 unidades</td>
@@ -157,11 +174,17 @@
             </section>
 
             <section id="Historia">   
-                <div>
-                    <figure class="figure">
-                        <img src="/imagenes/PasteleriaPrincipal.jfif" class="figure-img img-fluid rounded" alt="Pasteleria sucursal principal">
-                        <figcaption class="figure-caption text-end">Nuestra pasteleria ubicada en Copiapó en la actualidad</figcaption>
-                    </figure>    
+                <figure class="figure col-6">
+                    <img src="/imagenes/PasteleriaPrincipal.jfif" class="figure-img img-fluid rounded" alt="Pasteleria sucursal principal">
+                    <figcaption class="figure-caption text-end">Nuestra pasteleria ubicada en Copiapó en la actualidad</figcaption>
+                </figure>    
+                <div class="card col-5">
+                    <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>La historia de Delicias Giam Giam.</p>
+                        <footer class="blockquote-footer">Fundada en <cite title="Source Title">01-12-2020</cite></footer>
+                    </blockquote>
+                    </div>
                 </div>
                 <div>
                     <figure class="figure">
@@ -172,6 +195,29 @@
             </section>
             
             <section id="Comentarios">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">@chocolover23 - Santiago</div>
+                        "¡El mejor pastel de chocolate que he probado! Intenso, cremoso y perfecto para los amantes del cacao. REALMENTE TENTACIÓN DE CHOCOLATE EPICO LE QUEDA!"
+                    </div>
+                    <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">@frutifresca19 - Atacama</div>
+                        "La Tarta Mística de Frutos Rojos es fresca y deliciosa, con una mezcla perfecta de sabores. ¡Cada bocado es una explosión de frutas!                    
+                    </div>
+                    <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">@lemonfanatic - Atacama</div>
+                            "El Cupcake Nube de Limón es ligero y refrescante. La combinación de limón y merengue es perfecta. ¡Ideal para endulzar el día!"
+                    </div>
+                    <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </ol>
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">First name</label>
