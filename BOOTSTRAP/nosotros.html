@@ -5,19 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="/BOOTSTRAP/style.css">
+    <link rel="stylesheet" href="/BOOTSTRAP/stylePropio.css">
 
-    <style>
-        .img-social{
-            height: 32px;
-            width: 32px;
-        }
-
-        .img-SobreNosotros{
-            height: 30%;
-            width: 30%;
-        }
-
-    </style>
 </head>
 <body class="body-principal">
     <div class="container-fluid">
@@ -54,11 +43,17 @@
             </nav>
         </header>
         <main>
-            <!--ajustar tamaño imagenes-->
-            <section id="SobreNosotros" class="row my-10">
-                <div class="col-6">
-                    <video src="/videos/video pasteleria.mp4" class="Video col-12" autoplay controls muted></video>
+            <section id="Galeria" class="row justify-content-center py-5">
+                <div class="col-8 card bg-transparent border-0">
+                    <video src="/videos/video pasteleria.mp4" class="Video w-100" autoplay muted loop ></video>
+                    <div class="card-img-overlay text-color-secundario justify-content-center text-center fw-bold">
+                        <h1 class="card-title">Bienvenidos a Delicias GIAM GIAM</h1>
+                        <p class="card-text">Descubre la magia de la repostería artesanal que ponemos en cada bocado. <br> ¡HAREMOS REALIDAD TUS MÁS DULCES SUEÑOS!</p>
+                    </div>
                 </div>
+            </section>
+
+            <section id="SobreNosotros" class="row my-10">
                 <div class="accordion accordion-flush col-6" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -125,7 +120,7 @@
 
             <section id="Historia" class="row text-center mt-5 mb-5">  
                 <div class="col-5">
-                    <img src="/imagenes/pasteleros.webp" alt="Nuestro equipo principal" class="img-fluid mx-auto ">
+                    <img src="/imagenes/pasteleros.webp" alt="Nuestro equipo principal" class="img-fluid mx-auto Img-Historia">
                 </div> 
                 <div class="col-7 bg-color-extra5 py-5">
                     <h2 class="">
@@ -145,7 +140,7 @@
                     </p>
                 </div>
                 <div class="col-5">
-                    <img src="/imagenes/PasteleriaPrincipal.jfif" alt="Tienda principal Copiapó" class="img-fluid mx-auto">
+                    <img src="/imagenes/PasteleriaPrincipal.jfif" alt="Tienda principal Copiapó" class="img-fluid mx-auto Img-Historia">
                 </div>
 
             </section>
@@ -269,11 +264,11 @@
                         </select>
                         </div>
                         <div class="col-md-3">
-                        <label for="validationCustom05" class="form-label">Tipo</label>
+                        <label for="validationCustom05" class="form-label">Motivo</label>
                         <select class="form-select" id="validationCustom05" required>
                             <option selected disabled value="">Seleccione</option>
                             <option>Consulta</option>
-                            <option>Opinion</option>
+                            <option>Opinión</option>
                             <option>Reclamo</option>
                             <option>Encargo</option>
                             <option>Solicitud empleo</option>
@@ -299,6 +294,22 @@
                 </div>
             </section>
 
+            <hr class="mb-5 mt-5">
+
+            <section id="Servicios" class="row mb-7 bg-color-extra3 justify-content-center text-center py-5">    
+                <div class="col-md-4">
+                    <img src="/imagenes/Delivery.png" alt="Servicio de delivery" class="img-fluid">
+                    <h5 class="mt-5">Delivery rapido y seguro</h5>
+                </div>       
+                <div class="col-md-4">
+                    <img src="/imagenes/5estrellas.png" alt="Servicio de 5 estrellas" class="img-fluid">
+                    <h5 class="mt-5">Ofrecemos un servicio y atención de la más alta calidad</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="/imagenes/Felices.png" alt="Clientes satisfechos" class="img-fluid">
+                    <h5 class="mt-5">Protemos una sonrisa por cada bocado</h5>
+                </div>       
+            </section>
         </main>
         <footer class="bg-color-secundario py-5 px-4 mt-5">
             <div class="container-fluid">
