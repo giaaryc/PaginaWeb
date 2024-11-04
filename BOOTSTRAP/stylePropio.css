@@ -37,17 +37,10 @@ a:hover{
 
 /* Formulario Login */
 #Login{
-    background-color: #f7accf;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 500px;
-    width: 600px;
-    border-color: #fd7bb8;
-    border-width: 8px;
-    border-radius: 8%;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
     margin: 0 auto;
 }
 
