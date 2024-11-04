@@ -32,66 +32,50 @@ a:hover{
 }
 
 .p-letra, .btn-letra{
-    font-size: 22px;
+    font-size: 26px;
 }
 
 /* Formulario Login */
-#Login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-#Login, #TituloForm{
-    margin-bottom: 50px;
-}
-
 .Login-item{
-    position: relative;
+    margin-bottom: 40px;
+    margin-top: 10px;
     height: 60px;
-    width: 90%;
-    margin-bottom: 10px;
+    width: 100%;
 }
 
 .Login-item label{
-    position: absolute;
-    top: 15px;
-    left: 60px;
-    padding: 0 4px;
-    color: #000000;
-    font-size: 17px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 .Login-item input{
-    position: absolute;
-    top: 5px;
-    left: 180px;
     height: 80%;
-    width: 50%;
-    border: 1px solid #DADCE0;
+    width: 100%;
+    border: 1px solid #8f5096;
     border-radius: 7px;
-    font-size: 17px;
+    font-size: 20px;
     padding: 0 20px;
+    background: #a966b0;
+
 }
 
-#Login button{
-    position: absolute;
-    left: 170px;
-    top: 20px;
-    font-size: 20px;
-    width: 200px;
-    height: 50px;
-    background-color: #fd7bb8;
+.Login-item input:hover{
+    border: 3px solid #813e89;
+}
+
+.Login-item p{
+    font-size: 23px;
+    color: #813589;
 }
 
 .Login-item a{
-    position: absolute;
-    left: 400px;
-    top: 30px;
-    font-size: 20px;
+    font-size: 23px;
+    text-decoration: none;
+    color: #813589;
 }
+
 
 /*Comienzo nuevo*/
 .item-imagen{
