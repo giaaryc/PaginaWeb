@@ -1,13 +1,22 @@
 <?php
 include("conexion.php");
 
-$nombre = "giare";
-$apellido = "varas";
-$region = "atacama";
-$ciudad = "copiapo";
-$pass = "3107";
-$correo = "giare@gmail.com";
+$id = $_POST['id_usuario'];
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$region = $_POST['region'];
+$comuna = $_POST['comuna'];
+$clave = $_POST['clave'];
+$correo = $_POST['correo'];
+$telefono = $_POST['telefono'];
 
-mysqli_query($conexion, 'INSERT INTO usuario (nombre, apellido, region, ciudad, clave, correo) VALUES ("$nombre","$apellido","$region","$ciudad","$pass","$correo")');
+$sql="INSERT INTO usuario (nombre, apellido, region, comuna, clave, correo, telefono) VALUES ('$nombre','$apellido','$region','$comuna','$clave','$correo', '$telefono')";
+$query=mysqli_query($conexion,$sql);
+
+if($query){
+    Header("Location: usuario.php");
+} else{
+}
+
 mysqli_close($conexion);
 ?>
