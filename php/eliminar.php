@@ -1,8 +1,16 @@
 <?php
 include("conexion.php");
 
-$id = 11;
+$id_usuario=$_GET['id_usuario'];
 
-mysqli_query($conexion, "DELETE FROM usuario WHERE id_usuario = '$id'");
+$sql="DELETE FROM usuario WHERE id_usuario = '$id_usuario'";
+$query=mysqli_query($conexion, $sql);
+
+if($query){
+    Header("Location: usuario.php");
+}
+
+
 mysqli_close($conexion);
+
 ?>
