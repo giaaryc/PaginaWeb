@@ -1,7 +1,11 @@
 <?php
+
 include("conexion.php");
 
-mysqli_query($conexion, "SELECT * FROM usuario");
+$sql="SELECT * FROM usuario";
+$query = mysqli_query($conexion,$sql);
+$row=mysqli_fetch_array($query);
+
 mysqli_close($conexion);
 
 ?>
@@ -43,8 +47,102 @@ mysqli_close($conexion);
                 </div>
             </nav>
         </header>
+
         <main>
+            <table class="table">
+                <thead class="table-seccess table-striped">
+                    <tr>
+                        <th>id</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>region</th>
+                        <th>comuna</th>
+                        <th>clave</th>
+                        <th>correo</th>
+                        <th>telefono</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        while ($row=mysqli_fetch_array ($query)) {
+                    ?>
+                    <tr>
+                    <th><?php echo $row['id_usuario']?></th>
+                        <th><?php echo $row['nombre']?></th>
+                        <th><?php echo $row['apellido']?></th>
+                        <th><?php echo $row['region']?></th>
+                        <th><?php echo $row['comuna']?></th>
+                        <th><?php echo $row['clave']?></th>
+                        <th><?php echo $row['correo']?></th>
+                        <th><?php echo $row['telefono']?></th>
+                        <th><a href="actualizar.php id=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></th>
+                        <th><a href="eliminar.php id=<?php echo $row['id_usuario']?>" class="btn btn-danger">Eliminar</a></th>
+                    </tr>
+                    <?php
+                        }
+                    ?>
+                </tbody>
+
+            </table>
         </main>
+
+        <footer class="bg-color-secundario py-5 px-4 mt-5">
+            <div class="container-fluid">
+                <section id="Links" class="row mb-5">
+                    <div class="col-12 col-md-3 mb-3">
+                        <h3 class="text-color-principal text-center">Conócenos</h3>
+                        <!-- list-unstyled = le quita los puntitos a la lista -->
+                        <ul class="list-unstyled">
+                            <li><a href="Nosotros.html" class="text-color-principal text-decoration-none">Quiénes somos</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Preguntas frecuentes</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Comentarios</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Link 1</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <h3 class="text-color-principal text-center">Nuestros productos</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-color-principal text-decoration-none">Galletas</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Cupcakes y Muffins</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Tartas</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Postres veganos y/o sin gluten</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <h3 class="text-color-principal text-center">Acompáñanos</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-color-principal text-decoration-none">Eventos</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Cursos</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">Sorpresas</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <h3 class="text-color-principal text-center">Navegación</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="indexPropio.html" class="text-color-principal text-decoration-none">Inicio</a></li>
+                            <li><a href="Login.html" class="text-color-principal text-decoration-none">Iniciar Sesión</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
+                            <li><a href="#" class="text-color-principal text-decoration-none">...</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="Social text-center mb-4">
+                    <!--img-fluid = para que sea 100% (responsiva)-->
+                    <a href="#" class="mx-2"><img src="../imagenes/face.png" alt="Facebook" class="img-fluid img-social"></a>
+                    <a href="#" class="mx-2"><img src="../imagenes/wsp.png" alt="WhatsApp" class="img-fluid img-social"></a>
+                    <a href="#" class="mx-2"><img src="../imagenes/instagram.png" alt="Instagram" class="img-fluid img-social"></a>
+                    <a href="#" class="mx-2"><img src="../imagenes/tiktok.png" alt="TikTok" class="img-fluid img-social"></a>
+                    <a href="#" class="mx-2"><img src="../imagenes/correo.png" alt="Correo" class="img-fluid img-social"></a>
+                </section>
+                <div class="text-center">
+                    <p>&copy; 2024 Giarella Varas C.</p>
+                </div>
+            </div>
+        </footer>    
+
     </div>
 </body>
 

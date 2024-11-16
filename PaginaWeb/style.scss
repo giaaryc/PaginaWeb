@@ -2,6 +2,7 @@
 @import "../BOOTSTRAP/node_modules/bootstrap/scss/variables";
 @import "../BOOTSTRAP/node_modules/bootstrap/scss/variables-dark";
 
+
 // Crear mapa personalizado
 $custom-colors: (
     // Colores rosados
@@ -23,3 +24,5 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../BOOTSTRAP/node_modules/bootstrap/scss/bootstrap.scss";
+
+

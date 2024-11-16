@@ -125,13 +125,15 @@ a:hover{
     height: 100%;
     border-radius: 20%;
 }
-
 header {
-    background-image: url("../imagenes/Header.jfif");
+    background-image: url("../imagenes/header.png");
+    background-color: #813e89;
+
 }
 
 .body-principal {
     background-image: url("../imagenes/Fondo.png");
+    background-color: #813e89;
 }
 
 .body-secundario {
@@ -139,7 +141,6 @@ header {
     background-size: 100% 100%;
     background-position: center;
 }
-
 
 .LogoSuperior{
     max-width: 40%;
