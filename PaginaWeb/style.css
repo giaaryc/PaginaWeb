@@ -1992,8 +1992,8 @@ progress {
 
 .table-info {
   --bs-table-color: #000;
-  --bs-table-bg: #dca0e2;
-  --bs-table-border-color: #b979be;
+  --bs-table-bg: #cff4fc;
+  --bs-table-border-color: #a6c3ca;
   --bs-table-striped-bg: #c5e8ef;
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #badce3;
@@ -12821,22 +12821,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-header {
-  background-image: url("/imagenes/Header.jfif");
-}
-
-.body-principal {
-  background-image: url("/imagenes/Fondo.png");
-}
-
-.body-secundario {
-  background-image: url("/imagenes/FondoRegistro.png");
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.LogoSuperior {
-  max-width: 40%;
-  max-height: 40%;
 }/*# sourceMappingURL=style.css.map */

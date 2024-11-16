@@ -1,0 +1,25 @@
+@import "../BOOTSTRAP/node_modules/bootstrap/scss/functions";
+@import "../BOOTSTRAP/node_modules/bootstrap/scss/variables";
+@import "../BOOTSTRAP/node_modules/bootstrap/scss/variables-dark";
+
+// Crear mapa personalizado
+$custom-colors: (
+    // Colores rosados
+    "color-principal": #682040,
+    "color-secundario": #f73e94,
+    "color-terciario": rgb(255, 147, 194),
+    // Colores morados
+    "color-extra1": #dca0e2,
+    "color-extra2": #be83c5,
+    // Colores celestes
+    "color-extra3": #92C5FC,
+    "color-extra4": #5ea8f7,
+    // Colores amarillos
+    "color-extra5": #FAEBA6,
+    "color-extra6": #f7dd6e
+);
+
+// Combina los mapas
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../BOOTSTRAP/node_modules/bootstrap/scss/bootstrap.scss";
