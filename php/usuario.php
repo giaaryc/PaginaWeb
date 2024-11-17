@@ -1,10 +1,12 @@
 <?php
-
 include("conexion.php");
 
-$sql="SELECT * FROM usuario";
-$query = mysqli_query($conexion,$sql);
-$row=mysqli_fetch_array($query);
+if (isset($_GET['buscador'])) {
+    $dato_buscado=$_GET['dato_buscado'];
+
+    $sql="SELECT * FROM usuario WHERE id_usuario LIKE '%$dato_buscado%' OR nombre LIKE'%$dato_buscado%' OR apellido LIKE'%$dato_buscado%' OR region LIKE'%$dato_buscado%' OR comuna LIKE'%$dato_buscado%' OR correo LIKE'%$dato_buscado%' OR telefono LIKE'%$dato_buscado%'";
+    $query=mysqli_query($conexion, $sql);
+}
 
 mysqli_close($conexion);
 
@@ -49,6 +51,10 @@ mysqli_close($conexion);
         </header>
 
         <main>
+            <form action="" method="GET">
+                <input type="text" name="dato_buscado" placeholder="Ingrese palabra clave" value="">
+                <input type="submit" name="buscador">
+            </form>
             <table class="table">
                 <thead class="table-seccess table-striped">
                     <tr>
