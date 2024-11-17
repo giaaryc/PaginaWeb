@@ -77,7 +77,7 @@ mysqli_close($conexion);
                         <th><?php echo $row['clave']?></th>
                         <th><?php echo $row['correo']?></th>
                         <th><?php echo $row['telefono']?></th>
-                        <th><a href="actualizar.php?id=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></th>
+                        <th><a href="actualizar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></th>
                         <th><a href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-danger">Eliminar</a></th>
                     </tr>
                     <?php
