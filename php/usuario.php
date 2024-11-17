@@ -50,12 +50,13 @@ mysqli_close($conexion);
             </nav>
         </header>
 
-        <main>
-            <form action="" method="GET">
-                <input type="text" name="dato_buscado" placeholder="Ingrese palabra clave" value="">
-                <input type="submit" name="buscador">
+        <main class="container">
+            <form action="" method="GET" class="d-flex">
+                <a href="../PaginaWeb/registro.html" class="btn btn-color-extra4">Añadir usuario nuevo</a>
+                <input type="search" name="dato_buscado" placeholder="Ingrese palabra clave" class="form-control me-2" aria-label="Search">
+                <input type="submit" name="buscador" class="btn btn-outline-success">
             </form>
-            <table class="table">
+            <table class="table text-center">
                 <thead class="table-seccess table-striped">
                     <tr>
                         <th>id</th>
@@ -84,13 +85,13 @@ mysqli_close($conexion);
                         <th><?php echo $row['correo']?></th>
                         <th><?php echo $row['telefono']?></th>
                         <th><a href="actualizar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></th>
-                        <th><a href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-danger">Eliminar</a></th>
+                        <!--https://es.stackoverflow.com/questions/367584/alerta-confirmar-eliminar-registro-->
+                        <th><a class="btn btn-danger" href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"></i>Eliminar</a></th>
                     </tr>
                     <?php
                         }
                     ?>
                 </tbody>
-
             </table>
         </main>
 
