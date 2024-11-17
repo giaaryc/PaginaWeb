@@ -51,42 +51,40 @@ mysqli_close($conexion);
         </header>
 
         <main class="container">
-            <form action="" method="GET" class="d-flex">
-                <a href="../PaginaWeb/registro.html" class="btn btn-color-extra4">Añadir usuario nuevo</a>
-                <input type="search" name="dato_buscado" placeholder="Ingrese palabra clave" class="form-control me-2" aria-label="Search">
-                <input type="submit" name="buscador" class="btn btn-outline-success">
+            <form action="" method="GET" class="d-flex align-items-center mb-4 my-5">
+                <input type="search" name="dato_buscado" placeholder="Ingrese palabra clave" class="form-control me-3 py-2" aria-label="Search" >
+                <input type="submit" name="buscador" class="btn btn-outline-dark btn-lg me-3">
+                <a href="../PaginaWeb/registro.html" class="btn btn-outline-dark btn-lg text-nowrap">Añadir usuario</a>
             </form>
-            <table class="table text-center">
-                <thead class="table-seccess table-striped">
+            <table class="table align-middle table-hover text-center">
+                <thead class="table-active">
                     <tr>
-                        <th>id</th>
-                        <th>nombre</th>
-                        <th>apellido</th>
-                        <th>region</th>
-                        <th>comuna</th>
-                        <th>clave</th>
-                        <th>correo</th>
-                        <th>telefono</th>
-                        <th></th>
-                        <th></th>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">APELLIDO</th>
+                        <th scope="col">REGIÓN</th>
+                        <th scope="col">COMUNA</th>
+                        <th scope="col">CORREO</th>
+                        <th scope="col">TELÉFONO</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="">
                     <?php
                         while ($row=mysqli_fetch_array ($query)) {
                     ?>
                     <tr>
-                    <th><?php echo $row['id_usuario']?></th>
-                        <th><?php echo $row['nombre']?></th>
-                        <th><?php echo $row['apellido']?></th>
-                        <th><?php echo $row['region']?></th>
-                        <th><?php echo $row['comuna']?></th>
-                        <th><?php echo $row['clave']?></th>
-                        <th><?php echo $row['correo']?></th>
-                        <th><?php echo $row['telefono']?></th>
-                        <th><a href="actualizar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></th>
+                        <td><?php echo $row['id_usuario']?></td>
+                        <td><?php echo $row['nombre']?></td>
+                        <td><?php echo $row['apellido']?></td>
+                        <td><?php echo $row['region']?></td>
+                        <td><?php echo $row['comuna']?></td>
+                        <td><?php echo $row['correo']?></td>
+                        <td><?php echo $row['telefono']?></td>
+                        <td><a href="actualizar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></td>
                         <!--https://es.stackoverflow.com/questions/367584/alerta-confirmar-eliminar-registro-->
-                        <th><a class="btn btn-danger" href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"></i>Eliminar</a></th>
+                        <td><a class="btn btn-danger" href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"></i>Eliminar</a></td>
                     </tr>
                     <?php
                         }

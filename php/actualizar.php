@@ -47,9 +47,9 @@ $row=mysqli_fetch_array($query);
                 </div>
             </nav>
         </header>
-        <main>
-        <form class="row" action="update.php" method="POST">
-
+        <main class="d-flex justify-content-center mt-5">
+        <form class="row bg-color-extra1 container-especial p-3" action="update.php" method="POST">
+            <h2 class="display-6 text-center py-3 my-3">MODIFICACIÓN</h2>
             <input type="hidden" name="id_usuario" value="<?php echo $row['id_usuario'] ?>">
 
             <div class="form-group col-12">
@@ -84,11 +84,8 @@ $row=mysqli_fetch_array($query);
             <div class="form-group col-6">
                 <label for="inputPassword5">Contraseña</label>
                 <input type="password" id="inputPassword5" class="form-control" name="clave" value="<?php echo $row['clave'] ?>">
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                    Tu contraseña debe tener entre 8 y 20 caracteres.
-                </small>                    
             </div>
-            <input type="submit" class="btn btn-color-extra4 btn-lg col-4 my-3" value="Actualizar"></input>
+            <input type="submit" class="btn btn-color-extra4 btn-lg col-4 mt-4 mb-2 mx-auto" value="Actualizar"></input>
         </form>
         </main>
 
