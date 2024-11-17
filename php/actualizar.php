@@ -69,12 +69,12 @@ $row=mysqli_fetch_array($query);
             </div>
             <div class="form-group col-3">
                 <label for="inputGroupSelect01">Región</label>
-                <select class="form-select custom-input" id="inputGroupSelect01" name="region">
-                    <option value="Atacama <?php echo $row['region'] ?>">Atacama</option>
-                    <option value="Valparaíso  <?php echo $row['region'] ?>">Valparaíso</option>
-                    <option value="Metropolitana  <?php echo $row['region'] ?>">Metropolitana</option>
-                    <option value="Biobío  <?php echo $row['region'] ?>">Biobío</option>
-                    <option value="Otra  <?php echo $row['region'] ?>">Otra</option>
+                <select class="form-select custom-input" id="inputGroupSelect01" name="region" value="<?php echo $row['region']?>">
+                    <option value="Atacama">Atacama</option>
+                    <option value="Valparaíso">Valparaíso</option>
+                    <option value="Metropolitana">Metropolitana</option>
+                    <option value="Biobío">Biobío</option>
+                    <option value="Otra">Otra</option>
                 </select>
             </div>
             <div class="form-group col-3">
