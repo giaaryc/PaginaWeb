@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PaginaWeb/style.css">
+    <link rel="stylesheet" href="/PaginaWeb/stylePropio.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-disniss="alert" aria-label="Close"></button>
+        <h4>Registro Exitoso!</h4>
+    </div>        
+    <form id="Login" method="POST" action="../php/controlador.php" name="InicioSesion">
+        <h4 class="text-center display-3 text-light">Inicio de Sesión</h4>
+        <div class="Login-item text-light">
+            <label for="user"> Usuario </label>
+            <input type="email" id="user" name="usuario" required />    
+        </div>
+        <div class="Login-item">
+            <label for="password"> Contraseña </label>
+            <input type="password" id="password" name="clave" required />    
+        </div>
+        <div class="Login-item text-center text-color-principal">
+            <p>⬇ ¿No tienes una cuenta?⬇ </p>
+            <a href="registro.html">Registrar</a>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-color-extra2" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-color-extra2" name="Login" value="login">Entrar</button>
+        </div>
+    </form>
+</body>
+</html>

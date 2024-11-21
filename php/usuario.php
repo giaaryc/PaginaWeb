@@ -8,6 +8,21 @@ if (isset($_GET['buscador'])) {
     $query=mysqli_query($conexion, $sql);
 }
 
+$alerta = "";
+if (isset($_GET['accion'])) {
+    switch ($_GET['accion']) {
+        case 'registro':
+            $alerta = "¡Registro de usuario exitoso!";
+            break;
+        case 'eliminar':
+            $alerta = "¡Eliminación de usuario exitosa!";
+            break;
+        case 'actualizar':
+            $alerta = "¡Modificación de usuario exitosa!";
+            break;
+    }
+}
+
 mysqli_close($conexion);
 
 ?>
@@ -51,6 +66,12 @@ mysqli_close($conexion);
         </header>
 
         <main class="container">
+            <!--
+            #<div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <h4><?php echo $alerta; ?></h4>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            -->
             <form action="" method="GET" class="d-flex align-items-center mb-4 my-5">
                 <input type="search" name="dato_buscado" placeholder="Ingrese palabra clave" class="form-control me-3 py-2" aria-label="Search" >
                 <input type="submit" name="buscador" class="btn btn-outline-dark btn-lg me-3">
@@ -84,7 +105,7 @@ mysqli_close($conexion);
                         <td><?php echo $row['telefono']?></td>
                         <td><a href="actualizar.php?id_usuario=<?php echo $row['id_usuario']?>" class="btn btn-info">Editar</a></td>
                         <!--https://es.stackoverflow.com/questions/367584/alerta-confirmar-eliminar-registro-->
-                        <td><a class="btn btn-danger" href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"></i>Eliminar</a></td>
+                        <td><a class="btn btn-danger" href="eliminar.php?id_usuario=<?php echo $row['id_usuario']?>" onclick="return confirm('¿Realmente desea eliminar?')">Eliminar</a></td>
                     </tr>
                     <?php
                         }

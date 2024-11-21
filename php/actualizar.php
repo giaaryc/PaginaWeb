@@ -85,7 +85,7 @@ $row=mysqli_fetch_array($query);
                 <label for="inputPassword5">Contraseña</label>
                 <input type="password" id="inputPassword5" class="form-control" name="clave" value="<?php echo $row['clave'] ?>">
             </div>
-            <input type="submit" class="btn btn-color-extra4 btn-lg col-4 mt-4 mb-2 mx-auto" value="Actualizar"></input>
+            <input type="submit" class="btn btn-color-extra4 btn-lg col-4 mt-4 mb-2 mx-auto" value="Actualizar" onclick="return confirm('¿Realmente desea modificar la información?')"></input>
         </form>
         </main>
 
