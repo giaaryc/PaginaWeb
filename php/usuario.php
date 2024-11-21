@@ -8,7 +8,6 @@ if (isset($_GET['buscador'])) {
     $query=mysqli_query($conexion, $sql);
 }
 
-$alerta = "";
 if (isset($_GET['accion'])) {
     switch ($_GET['accion']) {
         case 'registro':
@@ -66,12 +65,6 @@ mysqli_close($conexion);
         </header>
 
         <main class="container">
-            <!--
-            #<div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <h4><?php echo $alerta; ?></h4>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            -->
             <form action="" method="GET" class="d-flex align-items-center mb-4 my-5">
                 <input type="search" name="dato_buscado" placeholder="Ingrese palabra clave" class="form-control me-3 py-2" aria-label="Search" >
                 <input type="submit" name="buscador" class="btn btn-outline-dark btn-lg me-3">
