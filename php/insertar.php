@@ -36,13 +36,13 @@ if (mysqli_num_rows($resultado) > 0){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../PaginaWeb/style.css">
     <link rel="stylesheet" href="../PaginaWeb/stylePropio.css">
-    <title>Sesión inicida</title>
+    <title>Registro</title>
 </head>
 
 <body class="body-principal">

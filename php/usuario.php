@@ -3,24 +3,12 @@ include("conexion.php");
 
 if (isset($_GET['buscador'])) {
     $dato_buscado=$_GET['dato_buscado'];
-
     $sql="SELECT * FROM usuario WHERE id_usuario LIKE '%$dato_buscado%' OR nombre LIKE'%$dato_buscado%' OR apellido LIKE'%$dato_buscado%' OR region LIKE'%$dato_buscado%' OR comuna LIKE'%$dato_buscado%' OR correo LIKE'%$dato_buscado%' OR telefono LIKE'%$dato_buscado%'";
-    $query=mysqli_query($conexion, $sql);
+}else{
+    $sql = "SELECT * FROM usuario";
 }
 
-if (isset($_GET['accion'])) {
-    switch ($_GET['accion']) {
-        case 'registro':
-            $alerta = "¡Registro de usuario exitoso!";
-            break;
-        case 'eliminar':
-            $alerta = "¡Eliminación de usuario exitosa!";
-            break;
-        case 'actualizar':
-            $alerta = "¡Modificación de usuario exitosa!";
-            break;
-    }
-}
+$query=mysqli_query($conexion, $sql);
 
 mysqli_close($conexion);
 
