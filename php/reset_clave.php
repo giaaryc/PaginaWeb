@@ -1,38 +1,38 @@
 <?php
 include("conexion.php");
 
-$id = $_POST['id_usuario'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$region = $_POST['region'];
-$comuna = $_POST['comuna'];
-$clave = $_POST['clave'];
-$correo = $_POST['correo'];
-$telefono = $_POST['telefono'];
-$confirmacion_clave = $_POST['confirmar_clave'];
+$alerta = "INGRESA TODOS LOS DATOS PARA LA RECUPERACIÓN";
 
-
-$VerificarCorreo_sql = "SELECT * FROM usuario WHERE correo = '$correo'";
-$resultado=mysqli_query($conexion,$VerificarCorreo_sql);
-
-#VERIFICACION:
-#mysqli_num_rows es para encontrar la cantidad de filas de la consulta
-if (mysqli_num_rows($resultado) > 0){
-    $alerta = " ❌ ERROR: EL CORREO YA ESTA EN USO ❌ <br><br>";
-}else{
-    if($clave === $confirmacion_clave){
-        $sql="INSERT INTO usuario (nombre, apellido, region, comuna, clave, correo, telefono) VALUES ('$nombre','$apellido','$region','$comuna','$clave','$correo', '$telefono')";
-        $query=mysqli_query($conexion,$sql);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $usuario = $_POST['correo'];
+    $clave = $_POST['clave'];
+    $confirmar_clave = $_POST['confirmar_clave'];
     
-        if($query){
-            $alerta = "🧁 ¡USUARIO REGISTRADO CORRECTAMENTE! 🧁 </b><br>";
-        } else{
-            $alerta = " ❌ ERROR: NO SE PUDO CONECTAR A LA BD ❌ <br><br>";
-        }    
+    $VerificarCorreo_sql = "SELECT * FROM usuario WHERE correo = '$usuario'";
+    $resultado = mysqli_query($conexion, $VerificarCorreo_sql);
+    
+    if (mysqli_num_rows($resultado) > 0) {
+        $row = mysqli_fetch_assoc($resultado);
+        if ($clave === $confirmar_clave) {
+            $ActualizarClave_sql = "UPDATE usuario SET clave = '$clave' WHERE correo = '$usuario'";
+            $query = mysqli_query($conexion, $ActualizarClave_sql);
+            if ($query) {
+                $alerta = " 🧁 ¡RECUPERACIÓN DE CLAVE EXITOSA! 🧁 <br><br>
+                    <button type='button' class='btn btn-color-extra4 mx-auto btn-lg' onclick=\"location.href='../PaginaWeb/index.html'\">Volver al inicio</button>
+                ";
+            } else {
+                $alerta = "❌ ERROR: NO SE PUDO ACTUALIZAR CONTRASEÑA ❌";
+            }
+        }else{
+            $alerta = "❌ ERROR: CONTRASEÑAS NO COINCIDEN ❌";
+        }
     }else{
-        $alerta = " ❌ ERROR: CONTRASEÑAS NO COINCIDEN ❌ <br><br>";
-    }
+        $alerta = "❌ ERROR: USUARIO NO EXISTE ❌ <br><br>
+        <button type='button' class='btn btn-color-extra4 mx-auto btn-lg' onclick=\"location.href='../PaginaWeb/registro.html'\">Registrarse</button>
+        ";
+    }    
 }
+mysqli_close($conexion);
 ?>
 
 <!DOCTYPE html>
@@ -42,47 +42,69 @@ if (mysqli_num_rows($resultado) > 0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../PaginaWeb/style.css">
     <link rel="stylesheet" href="../PaginaWeb/stylePropio.css">
-    <title>Registro</title>
+    <title>Login</title>
 </head>
 
 <body class="body-principal">
-    <div class="container-fluid">
-        <header>
-            <div class="container-fluid d-flex justify-content-center align-item-center bg-fondo-arcoiris" >
-                <img class="LogoSuperior" src="../imagenes/Logo.png" alt="Logo de la tienda">
-            </div>
-            <nav class="navbar navbar-expand-lg bg-color-secundario">
-                <div class="container-fluid">
+    <header>
+        <div class="container-fluid d-flex justify-content-center align-item-center bg-fondo-arcoiris" >
+            <img class="LogoSuperior" src="../imagenes/Logo.png" alt="Logo de la tienda">
+        </div>
+        <nav class="navbar navbar-expand-lg bg-color-secundario">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../PaginaWeb/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../PaginaWeb/nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../php/usuario.php">Panel de Control</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../PaginaWeb/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../PaginaWeb/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../php/usuario.php">Panel de Control</a>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
-                </div>
-            </nav>
-        </header>
-        <div class="alert alert-info alert-dismissible fade show py-5 mt-5 mb-5 text-center" role="alert">
-            <h3><?php echo $alerta; ?></h3>       
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-color-extra4 mx-2 btn-lg" data-bs-dismiss="alert" onclick="location.href='../PaginaWeb/registro.html'">Registro</button>
-                <button type="button" class="btn btn-color-extra4 mx-2 btn-lg" data-bs-dismiss="alert" onclick="location.href='../PaginaWeb/index.html'">Inicio</button>
             </div>
+        </nav>
+    </header>
+
+    <main class="bg-color-terciario container py-3 mx-auto my-5">
+        <div class="alert alert-info alert-dismissible fade show py-5 mt-2 mb-3 text-center" role="alert">
+            <h3 class="my-auto"><?php echo $alerta; ?></h3>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        <h3 class = "display-4 text-light text-center mt-2">RECUPERACIÓN DE CONTRASEÑA</h3>
+        <form class=" col-8  mx-auto"  action="" method="POST">
+            <div class="py-3 mb-2 mx-auto">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ej: name@example.com" name="correo" value="<?php echo $row['correo'] ?>">
+            </div>
+            <div class="my-2 py-2 mx-auto">
+                <label for="inputPassword5">Nueva contraseña</label>
+                <input type="password" id="inputPassword5" class="form-control" name="clave" required>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Tu contraseña debe tener entre 8 y 20 caracteres. <br>
+                </small>                    
+            </div>
+            <div class="my-3 mx-auto">
+                <label for="inputPassword5">Confirmar contraseña</label>
+                <input type="password" id="inputPassword5" class="form-control" name="confirmar_clave" required>                
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Ingresa tu contraseña nuevamente.<br>
+                </small>    
+            </div>
+            <button type="submit" class="btn btn-lg btn-color-secundario mb-3">Cambiar Contraseña</button>                
+        </form>
+    </main> 
+
         <footer class="bg-color-secundario py-5 mt-5">
             <div class="container-fluid">
                 <section id="Links" class="row mb-5">
@@ -136,7 +158,6 @@ if (mysqli_num_rows($resultado) > 0){
                 </div>
             </div>
         </footer>    
-    </div>
     <!--COSA DEL BOOTSTRAP-->
     <script src="../BOOTSTRAP/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 </body>
